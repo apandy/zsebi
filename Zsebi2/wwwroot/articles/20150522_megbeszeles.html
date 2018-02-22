@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="hu-HU">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SMOG-1 pocketqube</title>
+		<meta name="description" content="A Budapesti Műszaki és Gazdaságtudományi Egyetemen készülő 5x5x5 cm-es műhold honlapja.">
+		<meta name="keywords" content="cubesat,műhold,zsebi,SMOG-1,satellite,pocketqube,nano,pico">
+		<meta name="author" content="Hödl Emil Viktor">
+		<link rel="stylesheet" type="text/css" media="screen" href="/smog1/bme1styles.css">
+		<link rel="stylesheet" type="text/css" media="print" href="/smog1/printstyles.css">
+		<link rel="icon" type="image/png" href="/smog1/pictures/favicon.png">
+	</head>
+	<body>
+	
+<div id="container">
+	<div id="header">
+		<a href="/smog1/index.php"><img class="logo" src="/smog1/pictures/logo.jpg" width="203" height="206" alt="SMOG-1 logo"></a>
+		<h1 class="head">SMOG-1 pocketqube honlapja</h1>
+	</div>
+	
+	<div id="nav">
+		<ul id="menu">
+			<li>
+				<p class="listitem">SMOG-1</p>
+				<div>
+					<a href="/smog1/tortenet.html">Történet</a>
+					<a class="bottommenu" href="/smog1/felepites.html">Felépítés</a>
+				</div>
+			</li>
+			<li><a href="/index.php">BME GND</a></li>
+			<li>
+				<p class="listitem">Rádióamatőrök</p>
+				<div>
+					<a class="bottommenu" href="/smog1/haminfo.html">Információk</a>
+				</div>
+			</li>
+			<li><a href="/smog1/galeria.php">Galéria</a></li>
+			<li><a href="/smog1/archivum.php">Archívum</a></li>
+			<li><a href="/smog1/tamogatok.php">Támogatók</a></li>
+			<li><a href="/smog1/csapat.php">Csapat</a></li>
+			<li><a href="/smog1/publikaciok.php">Publikációk</a></li>
+		</ul>
+	</div>
+	
+	<div id="main">
+		<h1>SMOG-1 munkamegbeszélés 2015. május 8.</h1>
+		<p class="boldleft">
+		A megbeszélés első részét az "expert review" töltötte ki. 
+		A meghívott szakértő vendég Szimler András volt.
+		</p>
+		<p class="left">
+		Géczy Gábor és Kristóf Timur felvetítette a korábban már bemutatott 
+		blokkvázlatokat a Smog-1 vezérlő elektronikájáról. Ismertették a 
+		működését, valamint kitértek néhány részletre. Az első részlet, 
+		amiről hosszabb beszélgetés alakult ki, a buszra csatalakozást 
+		végző Schottky- dióda típusa volt.
+		</p>
+		<p class="left">
+		Szó esett a Limiter switch-ekről, a busz túláram védelméről. 
+		Léteznek ilyen IC-k, de mégis a külön elemekből való megépítés 
+		mellett döntöttek. Követelmény az 1,8 és 5,5 Volt közötti megbízható, 
+		stabil működés, kis fogyasztás és kis méret.
+		</p>
+		<p class="left">
+		Ugyancsak ismertetésre került a valós idejű óra és kalendárium 
+		egység is (RTCC). Ennek a tartalék energiaellátását egy vadonatúj 
+		technológián alapuló japán gyártmányú szuperkapacitás látja el, 
+		ez 11 mF kapacitású és kellően nagy biztonsági tényezővel képes 
+		biztosítani a Smog-1 műhold árnyékban eltöltött idejére az egység 
+		működését. Szóba került az esetleges meghibásodása, ehhez redundáns, 
+		kettős példányt kell alkalmazni. Gábor megemlítette, hogy egy teszter 
+		áramkörön dolgozik, amellyel az SPI buszon kommunikáló áramkörök 
+		működése lesz megvizsgálható. Kérdésre elmondta, hogy eddig hőkamrás 
+		tesztek nem voltak.
+		</p>
+		<p class="left">
+		Józsa Viktor szólt a rázás-tesztekkel összefüggő témákról. Kiss Botond, 
+		aki a felfogó idomot bemutatta, ezúttal nem jelent meg, nincs hír újabb 
+		fejleményekről a legyártásával kapcsolatosan.
+		</p>
+		<p class="left">
+		Téma volt a Varinex Kft., ahol 3D-s nyomtatással, prototípus gyártással 
+		foglalkoznak. Viktor beszámolt előzetes tapasztalatairól az ott kivitelezett 
+		teszt darabok kapcsán. Elmondta, hogy többféle anyaggal dolgoznak, volt 
+		közöttük meglepően jó tulajdonságokkal rendelkező is. Fém 3D-s kivitelezést 
+		vélhetően nem vállalnak, de Győrben állítólag van ilyen lehetőség is rajtuk keresztül.
+		</p>
+		<p class="left">
+		Ezután vázolta az akku felfogó elem most már kivitelezésre kész 
+		változatát. Szó esett a hővédelem "mártogatós" megoldásáról, ez 
+		összefügg azzal a kérdéssel, hogy a rádióadó végfokán képződő hőt 
+		hová vezetjük el. Egyelőre az a verzió van előtérben, hogy ezt nem 
+		szükségképp kell az akkumulátor közelében elhelyezni. Ha ez a felfogó 
+		elem elkészül, akkor lehet a szerkezetet és az akkumulátort együtt 
+		a rázásra előkészíteni.
+		</p>
+		<p class="left">
+		A következő beszédtéma a jelenlegi parabola felfogó elemmel kapcsolatban 
+		alakult ki. Bandi bácsi felhívta a figyelmet, hogy az új parabola 
+		szállítási, és szerelési munkálatai már május közepén kezdődnek. 
+		Ekkor leszerelésre kerül a régi. Ez alkalmat jelent arra, hogy az 
+		új felfogó elemet rá lehessen szerelni. László Gyula bemutatta a 
+		3D-s modellt, kis vita alakult ki a csavarok számát, elhelyezését, 
+		biztosítását illetően. A felfogó, szorító elem alumíniumból készül, 
+		és 8 darab M8-as anyacsavar fogja össze oldalanként. Viktor 
+		felajánlotta, hogy a következő megbeszélésig kellő segítséget 
+		biztosít Gyulának a pontos számításhoz.
+		</p>
+		<p class="left">
+		Ezután következett a megbeszélés leginkább izgalmas része, 
+		amikor Bandi bácsi szólt a start lehetőségekről, ill. az ezzel 
+		kapcsolatos fejleményekről.
+		</p>
+		<p class="left">
+		Jelenleg nincs az ISS-en (International Space Station, Nemzetközi Űrállomás) 
+		olyan kész megoldás, amivel az 5x5x5 cm-es pocketqube egységeket pályára 
+		lehet tenni. Kompromisszumként ajánlható az, hogy a cubesatokat pályára 
+		juttató egységben el lehet foglalni egy teljes 10x10x10-es térrészt, de 
+		ekkor ki is kell fizetni az ezzel járó költségeket. A fent lévő POD-ba 
+		(PicoSatellite Orbital Deployer, Pico műhold pályára állító) így talán 
+		3 vagy 4 pocketqube is behelyezhető lenne, de a költségek ugyanazok 
+		lennének, mint egy cubesat esetében.
+		</p>
+		<p class="left">
+		Ez nyilvánvalóan nem a legkedvezőbb út. Az ISS-ről való pályára 
+		állítás volna a megfelelő, mivel ezen pályán (400 km) a Smog-1 
+		tervezett kísérletei elvégezhetők, így egy magasabb pálya 
+		fölösleges illetve további problémakat vetne fel.
+		</p>
+		<p class="left">
+		Bandi bácsi e-mail kapcsolatban van Robert Twiggs professzorral, 
+		a pocketqube szabvány megalkotójával. Jelenlegi helyzet szerint 
+		szabadalmaztatják ezeket, vagy csak a kidobó-szerkezetet, és ha 
+		valaki használni akarja, akkor meg kell venni a jogokat.
+		</p>
+		<p class="left">
+		A másik, most már egyre inkább reális alternatívának tűnő út, 
+		az olasz Unisat által kínált pályára juttatás. Ekkor az oroszok 
+		Dnyepr rakétájával kerülne pályára, de ezzel több probléma, ill. 
+		megoldandó feladat is együtt jár. Ez a lehetőség kb. 600 km magas 
+		pályát biztosít, ahol a Smog-1 akar több évig - esetleg 25 évig is - 
+		pályán maradna. Ezt a hosszú időszakot a jelenleg rendelkezésre álló 
+		alkatrészekkel biztosan nem lehetne hasznosan kihasználni, főként 
+		az akkumulátor meghibásodására lehet számítani.
+		</p>
+		<p class="left">
+		Az elektroszmog (világűr fele sugárzott tv-teljesítmények) mérése 
+		szempontjából is kedvezőbb lenne az alacsony pálya. Végül a legtöbb 
+		izgalmat kiváltó körülmény az, hogy ez az indítás a jövő év közepén, 
+		második felében lenne, addigra (ez év végére?) letesztelt kész példány 
+		kellene a Smog-1-ből. Ez nem látszik reálisnak. Mindamellett időszerűvé 
+		vált foglalkozni a pályára juttatáshoz szükséges pénz előteremtésével is.
+		</p>
+		<p class="left">
+		Bandi bácsi szólt arról is, hogy egyre inkább előtérbe kerül egy 
+		olyan követelmény, hogy a felbocsátónak kötelezettsége lesz a 
+		visszatérést, (de-orbiting,) is megoldania, garantálnia. Ez olyan 
+		komplikált megoldásokat kíván, amelyek megfelelő tervezése, tesztelése 
+		összemérhető a jelenlegi tervezett rendszer kihívásaival.
+		</p>
+		<p class="left">
+		Szólt a Smog-1 antennáiról is. Úgy tűnik, egyre inkább elfogadott 
+		lesz az az álláspont, amire mi is jutottunk, hogy az ilyen kisméretű 
+		szerkezetek esetében az antenna kibocsátására a kiolvasztásos megoldás 
+		nem megfelelő. Esetleg újra elő lehet/kell venni a mérőszalag-kivitelt. 
+		Úgy tűnik azonban, hogy a Smog-1 esetében a kétféle antenna túl sok 
+		helyet igényelne, így mégis célravezetőbb tartani magunkat a jelenlegi tervekhez.
+		</p>
+		<p class="left">
+		A következő alkalomra újra meghívta Csizmadia Elek fizikust, egy 
+		olyan kísérletről való beszélgetésre, amelyet még senki nem csinált. 
+		Nagy permeabilitású anyagok alkalmazása mellett a pályáját a műhold 
+		vélhetően gyorsan elvesztené a Föld mágneses terében haladva. A 
+		folyamatos átmágneseződés a kinetikus energia gyors disszipációját vonzza magával.
+		</p>
+		<p class="left">
+		Szóba került, hogy volt egy vendége a Bolognai Egyetemről, ott 
+		szinten érdeklődnek egy Zsebi méretű műhold elkészítésének módjáról, 
+		és ebben együttműködnének velünk.
+		</p>
+		<p class="left">
+		Végül ugyancsak a témához tartozik a napcellák védelmi célú üvegborítása. 
+		Ha ez a magasabb pálya és hosszabb élettartam lesz a megvalósítható út, 
+		akkor kellenek a napcellákra a védőüvegek a káros sugárzások szűrése 
+		miatt. Ekkor viszont a jelenleg kidolgozás alatt lévő pattintásos 
+		napelem darabolás nem járható út. Az üveglap és a szilícium kristály 
+		nagyon nagy valószínűséggel nem fog ugyanott eltörni, tehát védőüveges 
+		napelemet ily módon nem lehet darabolni.
+		</p>
+		<p class="left">
+		Érdekes lehet a védőüveg nélküli napcellák degradációja, ez 
+		védőüveges esetben azt jelenti, hogy 15 év alatt mintegy 30 
+		százalékos teljesítmény csökkenéssel lehet számolni.
+		</p>
+		<p class="left">
+		Végül Dudás Levi szólt arról, hogy a műholdvezérlő állomás 
+		"független üzemmódra" állt át, ez azt jelenti, hogy csak a napelemes 
+		rendszer látja el energiával az állomást. Így, ha 1-2 napig felhős 
+		az idő az akkumulátorok lemerülnek.
+		</p>
+		<p class="left">
+		Az ok, hogy villámvédelmi megfontolások miatt optikai kábellel 
+		kapcsolódunk az egyetemi hálózathoz, ezért optika-réz átalakítókat 
+		kell alkalmazni. Mivel az először alkalmazott médiakonverterek, 
+		melyeknek fogyasztás 5-10 Wh, az egyik általunk használt 
+		rádiófrekvenciás sávban (437,400 – 437,500 MHz) zavarták a vételt, 
+		ezért optikai modullal rendelkező switch-ekre cseréltük őket, 
+		melyeknek 80 Wh a fogyasztásuk.
+		</p>
+		<p class="left">
+		A vizsgálatok során, arra jutottunk, hogy a médiakonverterek és 
+		az optikai modulok között csak az optikai oldal sebességében van 
+		különbség. A médiakonverterek 100 Mbitesek, míg a modulok 1 Gbitesek. 
+		Tehát 1 Gbites médiakonvertereket kell keresni, hogy csökkentsük 
+		a fogyasztást és ne zavarjanak a fent említett sávban.
+		</p>
+		<p class="left">
+		A websdr átalakítása előrehaladt, egy funcube dongle kerül fel, 
+		és a HA5PT, Tamástól kölcsönkapott egységet hamarosan vissza lehet adni.
+		</p>
+		<p class="left">
+		Az új parabola telepítéssel egy időben foglalkozni kell a villámvédelem 
+		kérdésével is. A meglévő villámhárítókat cserélni/hosszabbítani kell.
+		</p>
+		<p class="left">Budapest  2015. május 17.</p>
+		<p class="sign">Tölgyesi János (HG5APZ)</p>
+	</div>
+			
+		
+			<div id="footer">
+				<p class="foottext">SMOG-1 pocketqube | 1111 Budapest, Egry József utca 1. 12.emelet | Tel.: +36 1 463-2917 | bmegnd@gmail.com</p>
+				<p><a href="http://validator.w3.org/check?uri=referer"><img src="/smog1/pictures/icons/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a></p>
+				<!-- Piwik -->
+				<script type="text/javascript">
+				  var _paq = _paq || [];
+				  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+				  _paq.push(["setCookieDomain", "*.gnd.bme.hu"]);
+				  _paq.push(['trackPageView']);
+				  _paq.push(['enableLinkTracking']);
+				  (function() {
+					var u="//gnd.bme.hu/analytics/piwik/";
+					_paq.push(['setTrackerUrl', u+'piwik.php']);
+					_paq.push(['setSiteId', 2]);
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+				  })();
+				</script>
+				<noscript><p><img src="//gnd.bme.hu/analytics/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+				<!-- End Piwik Code -->
+			</div>
+		</div>
+	</body>
+</html>

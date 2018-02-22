@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="hu-HU">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SMOG-1 pocketqube</title>
+		<meta name="description" content="A Budapesti Műszaki és Gazdaságtudományi Egyetemen készülő 5x5x5 cm-es műhold honlapja.">
+		<meta name="keywords" content="cubesat,műhold,zsebi,SMOG-1,satellite,pocketqube,nano,pico">
+		<meta name="author" content="Hödl Emil Viktor">
+		<link rel="stylesheet" type="text/css" media="screen" href="/smog1/bme1styles.css">
+		<link rel="stylesheet" type="text/css" media="print" href="/smog1/printstyles.css">
+		<link rel="icon" type="image/png" href="/smog1/pictures/favicon.png">
+	</head>
+	<body>
+	
+<div id="container">
+	<div id="header">
+		<a href="/smog1/index.php"><img class="logo" src="/smog1/pictures/logo.jpg" width="203" height="206" alt="SMOG-1 logo"></a>
+		<h1 class="head">SMOG-1 pocketqube honlapja</h1>
+	</div>
+	
+	<div id="nav">
+		<ul id="menu">
+			<li>
+				<p class="listitem">SMOG-1</p>
+				<div>
+					<a href="/smog1/tortenet.html">Történet</a>
+					<a class="bottommenu" href="/smog1/felepites.html">Felépítés</a>
+				</div>
+			</li>
+			<li><a href="/index.php">BME GND</a></li>
+			<li>
+				<p class="listitem">Rádióamatőrök</p>
+				<div>
+					<a class="bottommenu" href="/smog1/haminfo.html">Információk</a>
+				</div>
+			</li>
+			<li><a href="/smog1/galeria.php">Galéria</a></li>
+			<li><a href="/smog1/archivum.php">Archívum</a></li>
+			<li><a href="/smog1/tamogatok.php">Támogatók</a></li>
+			<li><a href="/smog1/csapat.php">Csapat</a></li>
+			<li><a href="/smog1/publikaciok.php">Publikációk</a></li>
+		</ul>
+	</div>
+	
+	<div id="main">
+		<h1>Zsebi/Smog-1 munkamegbeszélés</h1>
+		<p class="boldleft">
+		A munkamegbeszélés napirendjét a core teamen belül az elektronikát 
+		tervező csoport két tagjának (Kristóf Timur, Géczy Gábor) prezentációja alkotta.
+		Bandi bá. a bevezetőben szólt a megelőző napi két rendezvényről, 
+		az egyik az Antal József Alapítvány keretében zajlott, a BME Központi 
+		épületében, nagyon sokan voltak, élénk érdeklődés kísérte az ő előadását, 
+		alig tudott szabadulni. Utána átjött az I épületbe, ahol már folytak az 
+		előadások, a Távközlési Klub rendezésében, ezek inkább a szakmai, 
+		hozzáértő közönségnek szóltak. Mindkét rendezvény nagyon sikeresnek mondható.
+		</p>
+		<p class="left">
+		Szólt arról, hogy napirenden van a logó tervezés a Smog-1-hez. 
+		Vannak jelentkezők, jó volna professzionális szintű eredményt kapni, 
+		de csak köszönet és vállveregetés jár a munkáért, megoldásért.
+		Kapott egy levelet egy amerikai rádió amatőrtől, a Masat vételéről, 
+		amiben ez az amerikai elküldte az igazi 3D-s QSL lapját, a hozzá 
+		való kétszínű szemüveggel, és mellékelt 2 dollárt is a válaszlevélhez... 
+		mindez a klasszikus időkre emlékeztetett, megcsodáltuk a 3D-s képet, 
+		Mucs Béla fotót is készített róla.
+		</p>
+		<p class="left">
+		Az első prezentáció a Smog-1-re tervezett OBC (On Board Computer) 
+		blokkvázlat szintű bemutatását tartalmazta. Az OBC felügyelete alatt a következő modulok lesznek:
+		<br>
+		</p>
+		<ul class="general">
+			<li>memória</li>
+			<li>kommunikációs egység</li>
+			<li>spektrumanalizátor</li>
+			<li>szenzorok</li>
+			<li>és egy totál dózismerő</li>
+		</ul>
+		<p class="left">
+		Mindezek úgynevezett LSW kapcsolók segítségével kapcsolhatok ki 
+		ill. be, pontosabban a power buszra és az adatforgalmat lebonyolító 
+		két SPI buszra. A power buszra csatlakozik az akkumulátor és a napelemek is.
+		</p>
+		<p class="left">
+		Visszatéro téma a kockára felkerülő antennák elhelyezése, a kidobó szerkezetben való "becsomagolása".
+		Az egyik verzió szerint a kidobó szerkezet (POD) három darab hasonló méretű kockát hordoz. 
+		Ebben az esetben, ha a Zsebi az első lehetne, akkor vissza lehetne hajtani úgy az antennákat, 
+		hogy a következő két kocka mellett épp elférnének. Természetesen nem megengedett, hogy valamiféle 
+		sérülést okozzon. A szabvány megengedi, hogy az 5x5x5 cm-es kocka 5 oldala mellett 7-7 mm-es további 
+		rést is igénybe vegyenek a holdak készítői. Ebben el lehetne helyezni az antennákat, esetleg 
+		egy vékony, műanyag dobozban, csomagolásban (?).  Ha az ISS-ről kerül pályára, ott megint 
+		mások a körülmények, a robotkarok a cubesatokhoz készült kidobó dobozokat használják.
+		A cubesatok esetében bevált antenna kioldási technika, - az elégetett műanyag zsinorokkal - 
+		nagyon kockázatos a pici holdakon, mert a pályára kerülést megelőző  hosszú, bizonytalan 
+		várakozás alatt elveszíthetik az aksi töltését, és nem lesz energia az antenna nyitási művelethez.
+		Probléma az, hogy a pocket holdak esetében eltérőek a viszonyok a cubesatokhoz képest, és 
+		eddig senki nem gondolta végig a fenti feladatokat, problémákat.
+		Újabb ötleteket kellene kitalálni/gyűjteni.
+		</p>
+		<p class="left">
+		A kontrollerekre van mar konkrét IC típus is, ez pedig a Microchip 
+		PIC18F87K90-es IC-je, low power,  1.8 Volttól 5.5 Voltig működik. 
+		A memóriához ugyancsak 1.8 Voltos szinten működőképes IC-t találtak, 
+		ez pedig az Atmel AT45DB641E típus, 64 Mbit kapacitású.
+		A magnetométer és a szögsebesség mérő szenzor hasonló típusú lesz, 
+		mint ami a Masat-1-en is volt. Mindezek az egységek két példányban 
+		lesznek a rendszerben, a redundancia miatt. Az OBC meghatározott 
+		időközönként un. heartbeat jelet küld ki, ebből tudja a felette 
+		lévő szinten működő EPS komputer, hogy rendben van-e a működés. 
+		Ha nem, akkor átkapcsolja a másik, tartalék egységre.
+		A második előadás a Smog-1 energia ellátó rendszeréről, az EPS-ről 
+		szólt. Ugyancsak blokkvázlat szinten indult a bemutatás, majd sor 
+		került a kapcsoló egységek áramkör szintű tárgyalására is. Gábor a 
+		végén bemutatta az áramkör-topologia első verzióját is, az alkatrészek 
+		elhelyezési vázlatát, a NYAK rajzolatot. Úgy becsüli, hogy 
+		1 cm2-en megvalósítható lesz egy LSW kapcsoló egység, Levi kissé 
+		pesszimistább, szerinte nagyobb hely kell neki. Ez nem mindegy, 
+		mert ezekből az egységekből több mint 10 kell a rendszerbe. A 
+		felépítésükhöz a Texas alacsony fogyasztású, nagy megbízhatóságú, 
+		military kivitelű IC-iből válogattak, egy d-tároló, egy árammérő ic, 
+		egy komparátor, valamint egy cmos kapcsoló kell hozza, nem szólva a 
+		passzív alkatrészekről.
+		Az előadó nem hallgatta el a megoldatlan, egyelőre kérdéses pontokat 
+		sem, az egyik ilyen pl. azoknak a diódáknak a konkrét típusa, amiknek 
+		szintén 1.8 Volton kellene működniük. Nem esett szó a dózismérő 
+		szenzorról, úgy tűnik, ez sem működik. 1.8 Voltos szinten.
+		</p>
+		<p class="left">
+		Mucs Béla és Bandi ba. gyakran szakította meg az előadókat kérdésekkel. 
+		Ezek a kérdések főként különféle extrém körülmények lékezelése iránt 
+		érdeklődtek, így pl. arról, hogy mi van akkor, ha az aksi zárlatos 
+		lesz? Az előadókon kívül Levi is igyekezett releváns válaszokat adni 
+		ezekre a fontos kérdésekre.
+		Végül a rázópadhoz szükséges befogószerkezet tervezésével foglalkozó 
+		két tag is röviden összegezte az elmúlt időszak néhány apró fejleményét.
+		Kisebb körben szóbakerult újra az antenna elhelyezése, nyitása, és 
+		ezzel kapcsolatban a nitinol huzal esetleges használhatósága.
+		</p>
+		<br>
+		<a class="linkred" href="/smog1/pictures/articles/20150310_Smog-1_munkamegbeszeles.jpg" onclick="window.open(this.href); return false;">
+			<img src="/smog1/pictures/articles/20150310_Smog-1_munkamegbeszeles_little.jpg" width="360" height="195" alt="2015.02.27. megbeszélés" title="2015.02.27. megbeszélés">
+		</a> 
+		<p class="left">Budapest  2015. február 27.</p>
+		<p class="sign">Tölgyesi János (HG5APZ)</p>
+	</div>
+			
+		
+			<div id="footer">
+				<p class="foottext">SMOG-1 pocketqube | 1111 Budapest, Egry József utca 1. 12.emelet | Tel.: +36 1 463-2917 | bmegnd@gmail.com</p>
+				<p><a href="http://validator.w3.org/check?uri=referer"><img src="/smog1/pictures/icons/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a></p>
+				<!-- Piwik -->
+				<script type="text/javascript">
+				  var _paq = _paq || [];
+				  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+				  _paq.push(["setCookieDomain", "*.gnd.bme.hu"]);
+				  _paq.push(['trackPageView']);
+				  _paq.push(['enableLinkTracking']);
+				  (function() {
+					var u="//gnd.bme.hu/analytics/piwik/";
+					_paq.push(['setTrackerUrl', u+'piwik.php']);
+					_paq.push(['setSiteId', 2]);
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+				  })();
+				</script>
+				<noscript><p><img src="//gnd.bme.hu/analytics/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+				<!-- End Piwik Code -->
+			</div>
+		</div>
+	</body>
+</html>

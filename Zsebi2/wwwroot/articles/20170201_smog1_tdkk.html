@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="hu-HU">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SMOG-1 pocketqube</title>
+		<meta name="description" content="A Budapesti Műszaki és Gazdaságtudományi Egyetemen készülő 5x5x5 cm-es műhold honlapja.">
+		<meta name="keywords" content="cubesat,műhold,zsebi,SMOG-1,satellite,pocketqube,nano,pico">
+		<meta name="author" content="Hödl Emil Viktor">
+		<link rel="stylesheet" type="text/css" media="screen" href="/smog1/bme1styles.css">
+		<link rel="stylesheet" type="text/css" media="print" href="/smog1/printstyles.css">
+		<link rel="icon" type="image/png" href="/smog1/pictures/favicon.png">
+	</head>
+	<body>
+	
+<div id="container">
+	<div id="header">
+		<a href="/smog1/index.php"><img class="logo" src="/smog1/pictures/logo.jpg" width="203" height="206" alt="SMOG-1 logo"></a>
+		<h1 class="head">SMOG-1 pocketqube honlapja</h1>
+	</div>
+	
+	<div id="nav">
+		<ul id="menu">
+			<li>
+				<p class="listitem">SMOG-1</p>
+				<div>
+					<a href="/smog1/tortenet.html">Történet</a>
+					<a class="bottommenu" href="/smog1/felepites.html">Felépítés</a>
+				</div>
+			</li>
+			<li><a href="/index.php">BME GND</a></li>
+			<li>
+				<p class="listitem">Rádióamatőrök</p>
+				<div>
+					<a class="bottommenu" href="/smog1/haminfo.html">Információk</a>
+				</div>
+			</li>
+			<li><a href="/smog1/galeria.php">Galéria</a></li>
+			<li><a href="/smog1/archivum.php">Archívum</a></li>
+			<li><a href="/smog1/tamogatok.php">Támogatók</a></li>
+			<li><a href="/smog1/csapat.php">Csapat</a></li>
+			<li><a href="/smog1/publikaciok.php">Publikációk</a></li>
+		</ul>
+	</div>
+	
+	<div id="main">
+		<h1>SMOG-1 2016-os TDK-k</h1>
+		<p class="boldleft">
+		A Budapesti Műszaki és Gazdaságtudományi Egyetemen 2016. november 17-én megrendezett Tudományos Diákköri Konferencián (TDK) 2 előadás szólt a SMOG-1-ről.
+		Ezen cikkben e két dolgozat összefoglalóját lehet elolvasni és az absztraktok végén linkek mutatnak a dolgozatok teljes anyagaira.
+		</p>
+		<p class="boldleft">
+		1. TDK dolgozat
+		<br>
+		A SMOG-1 műhold hőáramhálózatos modellezése
+		</p>
+		<p class="left">
+		Szerző:
+		<br>
+		Welsz Ágnes, Energetikai mérnöki alapszak (BSc)
+		<br>
+		<br>
+		Díjazás: Különdíj
+		<br>
+		<br>
+		Konzulens:
+		<br>
+		Józsa Viktor, egyetemi tanársegéd, Energetikai Gépek és Rendszerek Tanszék
+		<br>
+		Kovács Róbert, PhD hallgató, Energetikai Gépek és Rendszerek Tanszék
+		</p>
+		<h2 class="leftbold">Absztrakt:</h2>
+		<p class="left">
+		Dolgozatomban egy nanoműhold (PocketQube) hőáramhálózatos modellezését mutatom be, amelyet a BME-n a Szélessávú Hírközlés és Villamosság Tanszék és az Energetikai Gépek és Rendszerek Tanszék fejlesztenek közösen. A PocketQube egy 5 cm élhosszúságú kocka geometriájú műhold, melynek tömege nem haladhatja meg a 250 g-ot. A SMOG-1 célja az ember által keltett elektromágneses szennyezés, azaz elektroszmog mérése a digitális földfelszíni TV adók kibocsátási sávjában (430-860 MHz). A hőtechnikai tervezésnél az alapvető problémát a műhold kis mérete adja, hiszen a kis hőkapacitása miatt gyorsan lehűl, amely az elektronikai alkatrészek élettartamát rövidítheti. Az akkumulátor a legkritikusabb alkatrész, mivel ennek a működési hőmérséklettartománya 0 °C–40 °C-ig tart.
+		</p>
+		<p class="left">
+		A műhold külső oldallapjain található napelemek szolgáltatják az elektromos energiát az elektronikának, illetve túltermelés esetén az akkumulátorban tároljuk ezt le. A hőenergiát a Napból érkező direkt sugárzás, a Föld által visszavert napsugárzás illetve a saját sugárzása, valamint az elektronikai alkatrészek üzeme során felszabaduló hő adja. A műhold a tervek szerint egy 600 km-es alacsony Föld körüli keringési pályát követ majd, keringési periódusa 95 perc, melynek jelentős részét, mintegy 40%-át árnyékban tölti, így az elsődleges hőforrás, a Nap sugárzásának hiányában jelentős lesz a lehűlés.
+		</p>
+		<p class="left">
+		Munkám során Matlab Simulinkben a rendszer hőáramhálózatos modellezéssel foglalkoztam, mivel ebben a programban egy teljes pályaszimuláció is megvalósítható, amelynek a modellem a részét képezi majd. A legegyszerűbb elrendezéstől indulva az egyre részletesebb geometriai modellezés felé haladtam. Kezdetben egy korábbi, egy oldallemezből illetve akkumulátorból álló kéttárolós modellt bővítettem öttárolós modellé, amelyben már négy oldallap volt az akkumulátor mellett. További bővítések során először egy kockahéjat, tehát a hat oldalt képeztem le a középen található akkumulátorral. Ezután további finomításként a kockán belül található nyomtatott áramköri lapok is a modell részét képezték. A különböző modellekkel többféle szimulációt végeztem, vizsgálva például az akkumulátor kihűlése ellen alkalmazható ernyőzés hatását, a legrosszabb, illetve legjobb eseteket, vagy a szögsebességtől való függést.
+		</p>
+		<br>
+		<br>
+		A teljes dolgozat:
+		<br>
+		<a class="linkboldblue" href="/smog1/articles/20161117_smog1_tdkk/Welsz_Agnes_TDK.pdf" onclick="window.open(this.href); return false">A SMOG-1 műhold hőáramhálózatos modellezése (pdf)</a>
+		<br>
+		<p class="boldleft">
+		2.TDK dolgozat
+		<br>
+		A SMOG-1 nanoműhold végeselemes hőtechnikai modellezése
+		</p>
+		<p class="left">
+		Szerző:
+		<br>
+		 Petróczi Balázs, Gépészmérnöki mesterképzési szak (MA/MSc) 
+		<br>
+		<br>
+		Díjazás: 2. helyezés
+		<br>
+		<br>
+		Konzulens:
+		<br>
+		Józsa Viktor, egyetemi tanársegéd, Energetikai Gépek és Rendszerek Tanszék 
+		</p>
+		<h2 class="leftbold">Absztrakt:</h2>
+		<p class="left">
+		A SMOG-1 egy miniatürizált úgynevezett „PocketQube” osztályú műhold, melyet a Műszaki egyetem Szélessávú Hírközlés és Villamosságtan Tanszéke és az Energetikai Gépek és Rendszerek Tanszék fejleszt közösen. A műhold küldetése az elektromágneses sugárzás mérése alacsony földkörüli pályán a digitális TV adók sugárzásának (430-860 MHz) tartományában. A kisméretű műholdak egyik legnagyobb problémája az alacsony tömegükből adódó kis hőkapacitás. Emiatt a világűr viszontagságainak kitett műhold és az abban található alkatrészek hőmérséklete igen tág korlátok között mozoghat és túllépheti az alkatrészre megadott minimum és maximum hőmérsékleteket. Az én feladatom a műhold hőtani vizsgálata, termikus hőingadozásra érzékeny alkatrészek vizsgálata és tervezési javaslatok kidolgozása azok megfelelő hőmérsékleti korlátok között tartására.
+		</p>
+		<p class="left">
+		A SMOG-1 befoglaló mérete egy 5 cm névleges oldalhosszúságú kocka és tömege nem haladhatja meg a 250 g-ot. A műhold alacsony földkörüli – körülbelül 600 km-es – napszinkron pályán fog keringeni. Így egy periódus 95 percig tart melynek 60%-a napos, 40%-a pedig Földárnyékba esik. A kocka energiaellátását a 6 oldalán található napelemek látják el, energiatárolásra pedig a műhold belsejében található akkumulátor szolgál. Hőtanilag a SMOG-1 akkumulátora a legkritikusabb, mert ahhoz hogy üzemeljen, a hőmérséklete nem csökkenhet 0 °C alá és nem mehet 45 °C fölé. A kicsiny belső hely és a működéshez szükséges áramkörök miatt nincs lehetőség aktív fűtés beépítésére, tehát elsősorban passzív hőszigetelés alkalmazható.
+		</p>
+		<p class="left">
+		A numerikus hőechnikai vizsgálatot Ansys szoftvercsomag segítségével végezzük. A műhold pályájának ismeretében meghatároztam egy periódusra vonatkozó beérkező hőáramokat. Felhasználva a meghatározott hőtani környezetet és a műhold geometriáját, fokozatosan felépítettem a műhold modelljét. Eleinte egyszerűbb modellel vizsgáltam a műhold hőmérséklet-ingadozását különböző szigetelések mellett. Egy lehetőség az akkumulátor egy nyáklap felületére rögzítése, de távtartók beépítése javasolt a hőingadozás mérséklése érdekében. Így különböző anyagú távtartók hatását vizsgáltam. Ezután kiválasztottam a megfelelő szigetelőfóliát illetve a távtartó anyagát és már a konkrét szigetelés ismeretében tovább vizsgáltam a műholdat a modell és az anyagjellemzők pontosításával. Ezek mellett sor került a műhold termo-vákuumos mérésére amihez validációs számítást készítettem. 
+		</p>
+		<br>
+		<br>
+		A teljes dolgozat:
+		<br>
+		<a class="linkboldblue" href="/smog1/articles/20161117_smog1_tdkk/Thermal_finite_element_modelling_of_the_SMOG1_nanosatellite.pdf" onclick="window.open(this.href); return false">Thermal finite element modelling of the SMOG-1 nanosatellite (pdf, angol)</a>
+		<br>
+		<br>
+		Az oklevél:
+		<br>
+		<a class="linkboldblue" href="/smog1/articles/20161117_smog1_tdkk/Petroczy_Balazs_TDK_oklevel.jpg" onclick="window.open(this.href); return false">Petróczy Balázs TDK oklevél (jpg)</a>
+		</p>
+		<br>
+		<p class="left">Budapest 2017. február 1.</p>
+		<p class="sign">Hödl Emil Viktor</p>
+	</div>
+			
+		
+			<div id="footer">
+				<p class="foottext">SMOG-1 pocketqube | 1111 Budapest, Egry József utca 1. 12.emelet | Tel.: +36 1 463-2917 | bmegnd@gmail.com</p>
+				<p><a href="http://validator.w3.org/check?uri=referer"><img src="/smog1/pictures/icons/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a></p>
+				<!-- Piwik -->
+				<script type="text/javascript">
+				  var _paq = _paq || [];
+				  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+				  _paq.push(["setCookieDomain", "*.gnd.bme.hu"]);
+				  _paq.push(['trackPageView']);
+				  _paq.push(['enableLinkTracking']);
+				  (function() {
+					var u="//gnd.bme.hu/analytics/piwik/";
+					_paq.push(['setTrackerUrl', u+'piwik.php']);
+					_paq.push(['setSiteId', 2]);
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+				  })();
+				</script>
+				<noscript><p><img src="//gnd.bme.hu/analytics/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+				<!-- End Piwik Code -->
+			</div>
+		</div>
+	</body>
+</html>

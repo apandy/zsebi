@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="hu-HU">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SMOG-1 pocketqube</title>
+		<meta name="description" content="A Budapesti Műszaki és Gazdaságtudományi Egyetemen készülő 5x5x5 cm-es műhold honlapja.">
+		<meta name="keywords" content="cubesat,műhold,zsebi,SMOG-1,satellite,pocketqube,nano,pico">
+		<meta name="author" content="Hödl Emil Viktor">
+		<link rel="stylesheet" type="text/css" media="screen" href="/smog1/bme1styles.css">
+		<link rel="stylesheet" type="text/css" media="print" href="/smog1/printstyles.css">
+		<link rel="icon" type="image/png" href="/smog1/pictures/favicon.png">
+	</head>
+	<body>
+	
+<div id="container">
+	<div id="header">
+		<a href="/smog1/index.php"><img class="logo" src="/smog1/pictures/logo.jpg" width="203" height="206" alt="SMOG-1 logo"></a>
+		<h1 class="head">SMOG-1 pocketqube honlapja</h1>
+	</div>
+	
+	<div id="nav">
+		<ul id="menu">
+			<li>
+				<p class="listitem">SMOG-1</p>
+				<div>
+					<a href="/smog1/tortenet.html">Történet</a>
+					<a class="bottommenu" href="/smog1/felepites.html">Felépítés</a>
+				</div>
+			</li>
+			<li><a href="/index.php">BME GND</a></li>
+			<li>
+				<p class="listitem">Rádióamatőrök</p>
+				<div>
+					<a class="bottommenu" href="/smog1/haminfo.html">Információk</a>
+				</div>
+			</li>
+			<li><a href="/smog1/galeria.php">Galéria</a></li>
+			<li><a href="/smog1/archivum.php">Archívum</a></li>
+			<li><a href="/smog1/tamogatok.php">Támogatók</a></li>
+			<li><a href="/smog1/csapat.php">Csapat</a></li>
+			<li><a href="/smog1/publikaciok.php">Publikációk</a></li>
+		</ul>
+	</div>
+	
+	<div id="main">
+		<h1>Smog-1 munkamegbeszélés 2015. április 17.</h1>
+		<p class="boldleft">
+		A megbeszélés előtt a csoport egy része antenna mérést végzett az 
+		E épület tetején. Bandi bácsi sikeresnek értékelte a mérést.
+		</p>
+		<p class="left">
+		Emilnek sikerült néhány korabeli dokumentációt találnia a rázógépről. 
+		Ezek az 1970-es évek elején íródtak, az internet előtti időkben, nem 
+		könnyű a nyomukra akadni. Az első anyag egy cikk az akkori radio fernsehen 
+		elektronik című, NDK-ban megjelent folyóiratból. Ezt elküldtem Szikora 
+		Lászlónak (SZAL) is, aki akkortájt az NDK-ban tanult, dolgozott, így 
+		első kézből vannak emlékei és benyomásai az akkori fejlesztési és gyártási tevékenységről.
+		</p>
+		<p class="left">
+		A megjegyzései közül néhány: ebben az időben már megjelentek, sőt, 
+		szélesebb körben használatban voltak a tranzisztoros áramkörök. A 
+		rázógépben is vannak ilyen rack modulok, de nyilván 1000 W-os erősítőt 
+		nem lehetett tranzisztorokból előállítani. A rázó mechanikának van egy 
+		saját-rezonanciája, erre figyelni kell. A leírás szerint egy bizonyos 
+		rázó-igénybevétel után szünetet kell beiktatni mert melegednek a részegységek.
+		</p>
+		<p class="left">
+		A rázógéppel kapcsolatban szóbakerült egy demo lehetőség. Ez pedig a polulu 
+		cég accelerometer, giroscope és magnetometer szenzort tartalmazó MINiMU9 
+		nevű pici panelje és a hozzá tartozó 3D-s adat-megjelenítést végző szoftver. 
+		A panelt a rázógép fej-egységére szerelve látványosan lenne követhető a tesztelés 
+		folyamata. Bemutatásra került a fenti egység és a RaspberryPi-n futó megjelenítő szoftver is.
+		</p>
+		<p class="left">
+		A megbeszélésen Krüpl Zsolt, HG2ECZ meghívott vendégként vett részt. 
+		Bandi bácsi kifejtette, hogy a továbbiakban is meg szeretne hívni külső szakértőket, 
+		ill. cégek képviselőit, akik a területen dolgoznak. A cél az, hogy segítsék a munkát, 
+		ill. a cégek esetében esetleg a későbbi elhelyezkedésben, munkavállalásban 
+		segítsenek a csoportban dolgozó hallgatóknak. Egy új jelentkező is bekapcsolódott, 
+		egyelőre csak tájékozódó jelleggel. Szép számmal voltunk jelen, szokás szerint sokféle téma előkerült.
+		</p>
+		<p class="left">
+		Tibor bemutatta a napelem mérő teszt/szimuláló rendszerét. Készen áll 
+		arra, hogy pl. egy megfelelő lemezjátszó tányéron forgatni lehessen a 
+		megvilágítás előtt. Ez egy nagy teljesítményű reflektor lesz. Működik 
+		a rádiós kapcsolat, de még mérési eredményt nem továbbít a rádiós linken. 
+		Lemezjátszóra van ajánlat, de további forrás is érdekes. Olyan egység kell, 
+		amiről a tulajdonosa már lemondott, mert átalakításra kerül.
+		</p>
+		<p class="left">
+		A további két prezentációt a csoport már nagyjából ismerte, ezeket Gábor 
+		és Timur mutatta be, hogy a vendég, Zsolt megismerje és megjegyzéseket 
+		fűzzön hozzájuk. Gábor felvetítette a Smog-1 blokkdiagramját, és 
+		bemutatta a főbb egységeket benne: két energia bus, az első a 
+		szabályozatlan, erre csatlakozik az aksi, a napcellák és kétféle 
+		védőáramkör, kapcsoló egységek. A másik bus a szabályozott tápfeszültségé. 
+		Ennek részleteit Timur mutatta be.
+		</p>
+		<p class="left">
+		Gábor beszélt az RTCC (Real Time Clock and Calendar, Valós idejű óra és naptár) 
+		egység kidolgozásában elért eredményeiről. Bemutatásra került az egység első 
+		verziója, amely mindössze 8x8 mm-es méretű, rendkívül piciny darab. 
+		A bemutatott áramkör már tartalmazza az RTCC egységet és a hozzá tartozó 
+		redundáns energiaellátó egységet, amely az akkumulátor esetleges meghibásodása 
+		esetén is életben tartja az áramkört arra az időre, amíg a pályából adódó Föld 
+		árnyék miatt nincs beérkező energia a napelemek felől. Ez az időtartam kb. 
+		40 perc lesz a pályától függően. Az ismertetett mérési eredmények alapján az 
+		egység tartalék energiaellátó rendszere akár 3 óráig is életben tudja tartani 
+		az egész modult, amelynek folytonos működése kritikus a műhold vezérlése szempontjából.
+		</p>
+		<a class="linkred" href="/smog1/pictures/articles/20150417_megbeszeles/rtccv1.jpg" onclick="window.open(this.href); return false;"><img src="/smog1/pictures/articles/20150417_megbeszeles/rtccv1_little.jpg" width="600" height="450" alt="RTCC áramkör verzió 1" title="RTCC áramkör verzió 1"></a>
+		<p class="left">
+		Timur részletesen ismertette az EPS (Electrical Power Subsystem, Energiaellátó rendszer) 
+		egység blokkvázlatát. Hogyan kapcsolódnak a busra az OBC (OnBoard Computer, 
+		Fedélzeti számítóép) vezérlő kontrollerek, milyen szempontok alapján került 
+		kidolgozásra a köztük levő kapcsolat és kommunikáció. Légyegében két SPI busról 
+		van szó. Ismertette a múlt alkalommal előadott új elképzelést, a kontrollerek 
+		közötti 1-Wire kapcsolatról is.
+		</p>
+		<p class="left">
+		Zsolt több kérdést is feltett néhány alapvető paraméterről, és megjegyzéseket 
+		is fűzött a bemutatottakhoz. Elhangzott, hogy a kidolgozott feszültség konverter 
+		97 százalékos hatásfokú átalakítást végez, így célszerű a folyamatos használata.
+		</p>
+		<p class="left">
+		Bandi bácsi felhívta a figyelmet arra, hogy célszerű egyensúlyt találni a 
+		tartalék egységek, megfelelő száma, a megbízhatóság és a bonyolultság között.
+		<ul class="general">
+			<li>Főként kereskedelmi forgalomban kapható alkatrészekből dolgozunk az esetenként irreálisan drága űrminősített komponensek helyett.</li>
+			<li>A műhold alacsony Föld körüli pályára fog kerülni, ez feltehetőleg a Nemzetközi Űrállomás pályamagassága lesz.</li>
+			<li>A Dél-Amerika fölött alacsonyabb rétegekbe benyúló Van Allen övezetben csak kis időt fog tölteni a műhold, így alacsony szintű kozmikus háttérsugárzással, illetve az ehhez kapcsolható meghibásodással számolunk.</li>
+			<li>8-10 hónapnál nem lesz hosszabb az élettartama.</li>
+		</ul>
+		</p>
+		<p class="left">
+		Ezután szóbakerült a műhold tömegének megoszlása a különféle alkotórészek 
+		között. 175 gramm lehet a teljes tömege, ebből a váz 90 gramm, az akkumulátor 
+		30 gramm. A többi az elektronika és a napelemek.
+		</p>
+		<p class="left">
+		Gyula bemutatta a mechanikus rögzítő szerkezetre kidolgozott terveit, amivel a 
+		mostani 3 m-es parabola biztonságosabb felfogását szeretnék megoldani. 
+		A csoport néhány javaslattal segített a legjobb terv kiválasztásában és 
+		tökéletesítésében, figyelembe véve a szerelhetőséget és a rendelkezésre álló 
+		csatlakozási pontokat. Viktor és Botond is szólt aktuális feladatokról, pl. a 
+		rázógép felfogó egységének helyzetéről.
+		</p>
+		<p class="left">Budapest  2015. április 18.</p>
+		<p class="sign">Tölgyesi János (HG5APZ)</p>
+	</div>
+			
+		
+			<div id="footer">
+				<p class="foottext">SMOG-1 pocketqube | 1111 Budapest, Egry József utca 1. 12.emelet | Tel.: +36 1 463-2917 | bmegnd@gmail.com</p>
+				<p><a href="http://validator.w3.org/check?uri=referer"><img src="/smog1/pictures/icons/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a></p>
+				<!-- Piwik -->
+				<script type="text/javascript">
+				  var _paq = _paq || [];
+				  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+				  _paq.push(["setCookieDomain", "*.gnd.bme.hu"]);
+				  _paq.push(['trackPageView']);
+				  _paq.push(['enableLinkTracking']);
+				  (function() {
+					var u="//gnd.bme.hu/analytics/piwik/";
+					_paq.push(['setTrackerUrl', u+'piwik.php']);
+					_paq.push(['setSiteId', 2]);
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+				  })();
+				</script>
+				<noscript><p><img src="//gnd.bme.hu/analytics/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+				<!-- End Piwik Code -->
+			</div>
+		</div>
+	</body>
+</html>

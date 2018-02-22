@@ -1,0 +1,21 @@
+﻿@model IEnumerable<string> 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>    
+</head>
+<body>
+    <form enctype="multipart/form-data" action="/Admin/FileUpload" method="post">
+        <input id="upload" name="upload" type="file" />
+        <input id="image-file" type="submit" value="Feltöltés" />
+    </form>
+        
+   
+    
+</body>
+</html>

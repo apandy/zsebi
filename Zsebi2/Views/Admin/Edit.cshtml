@@ -1,0 +1,112 @@
+﻿@model Zsebi2.Models.Article
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>Article</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID" />
+        <div class="form-group">
+            <label asp-for="Title" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+        </div>  
+        <div class="form-group">
+            <label asp-for="PublishDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="PublishDate" class="form-control" />
+                <span asp-validation-for="PublishDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">Thumbnail</label>
+            <div class="col-md-10">
+                <input type="hidden" asp-for="ThumbnailFileName" />                
+                <img src="@Model.ThumbnailFileName" id="ThumbnailImage" height="100" />
+                <input class="btn btn-default" type="button" onclick="browseImages()" value="Böngészés a Szerveren" />
+                <input class="btn btn-default" type="button" onclick="uploadImage()" value="Feltöltés" />
+
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <label asp-for="Excerpt" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <textarea asp-for="Excerpt" style="height:100px;width:700px"></textarea>
+                @*<input asp-for="Excerpt" class="form-control" />*@
+                <span asp-validation-for="Excerpt" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="HtmlBody" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <textarea asp-for="HtmlBody" style="height:500px"></textarea>
+                @*<input asp-for="HtmlBody" class="form-control" />*@
+                <span asp-validation-for="HtmlBody" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {    
+    
+    <script>
+        function browseImages()
+        {
+            window.open('/Admin/FileBrowse?type=Images');
+        }
+      
+        function handleImageSelection(fileUrl) {
+            window.document.getElementById("ThumbnailFileName").value = fileUrl;
+            window.document.getElementById("ThumbnailImage").src = fileUrl;
+        }
+
+        function uploadImage() {
+            window.open('/Admin/FileUploadSelector?type=Images');
+        }
+
+        function handleImageUpload(fileUrl, message) {
+            if (message != '') {
+                alert(message)
+            }
+            else {
+                window.document.getElementById("ThumbnailFileName").value = fileUrl;
+
+                window.document.getElementById("ThumbnailImage").src = fileUrl;
+            }
+        }
+
+    </script>    
+    @*<script type="text/javascript">
+           $(function () {
+               $('#PublishDate').datetimepicker();
+           });
+    </script>*@
+
+
+    <script>CKEDITOR.replace('HtmlBody', {
+        filebrowserBrowseUrl: '/Admin/CKEditorFileBrowse?type=Images',
+        filebrowserUploadUrl: '/Admin/CKEditorFileUpload?type=Images'
+        });
+    </script>    
+}

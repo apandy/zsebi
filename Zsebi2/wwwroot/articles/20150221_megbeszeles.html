@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="hu-HU">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>SMOG-1 pocketqube</title>
+		<meta name="description" content="A Budapesti Műszaki és Gazdaságtudományi Egyetemen készülő 5x5x5 cm-es műhold honlapja.">
+		<meta name="keywords" content="cubesat,műhold,zsebi,SMOG-1,satellite,pocketqube,nano,pico">
+		<meta name="author" content="Hödl Emil Viktor">
+		<link rel="stylesheet" type="text/css" media="screen" href="/smog1/bme1styles.css">
+		<link rel="stylesheet" type="text/css" media="print" href="/smog1/printstyles.css">
+		<link rel="icon" type="image/png" href="/smog1/pictures/favicon.png">
+	</head>
+	<body>
+	
+<div id="container">
+	<div id="header">
+		<a href="/smog1/index.php"><img class="logo" src="/smog1/pictures/logo.jpg" width="203" height="206" alt="SMOG-1 logo"></a>
+		<h1 class="head">SMOG-1 pocketqube honlapja</h1>
+	</div>
+	
+	<div id="nav">
+		<ul id="menu">
+			<li>
+				<p class="listitem">SMOG-1</p>
+				<div>
+					<a href="/smog1/tortenet.html">Történet</a>
+					<a class="bottommenu" href="/smog1/felepites.html">Felépítés</a>
+				</div>
+			</li>
+			<li><a href="/index.php">BME GND</a></li>
+			<li>
+				<p class="listitem">Rádióamatőrök</p>
+				<div>
+					<a class="bottommenu" href="/smog1/haminfo.html">Információk</a>
+				</div>
+			</li>
+			<li><a href="/smog1/galeria.php">Galéria</a></li>
+			<li><a href="/smog1/archivum.php">Archívum</a></li>
+			<li><a href="/smog1/tamogatok.php">Támogatók</a></li>
+			<li><a href="/smog1/csapat.php">Csapat</a></li>
+			<li><a href="/smog1/publikaciok.php">Publikációk</a></li>
+		</ul>
+	</div>
+	
+	<div id="main">
+		<h1>Zsebi/Smog-1 munkamegbeszélés</h1>
+		<p class="boldleft">
+		Ez alkalommal nem voltak előre egyeztetett beszámolók, hanem kötetlen beszélgetések, tájékoztatók, 
+		a teendők pontosítása, és terevezgetések folytak.
+		A megbeszelést Bandi bá, HA5WH vezette.
+		</p>
+		<p class="left">
+		Egy jó hírrel kezdte, hogy Nemcsics Ákos (KFKI) sikeresen vágott/pattintott nagyobb, törmelék napcellából 
+		kisebbet. A technológia kritikus, mert a cella hátoldalán, a szilícium kristály határa mentén 
+		kell egy nagyon piciny karcolást végezni rajta, és ekkor a kristályszerkezet határán törik el, 
+		és megőrzi az eredeti tulajdonságait.
+		A hírt kiegészítette egy kevésbé kedvező fejleménnyel is: lehet szerezni "space quality" 
+		nagyobb cellákat, itt a minőségi kitétel egy vékony kvarc üveg borítást takar, ami megvédi 
+		a cellák felületét a hosszan tartó kozmikus sugárzás egy részétől. Ez azért kedvezőtlen 
+		a jelenlegi helyzetünkben, mert az üveg borítás tovább bonyolítja a pattintást, aligha 
+		várható el az üvegtől, hogy kövesse a szilícium kristály törési hajlandóságát. Mivel a 
+		Zsebi rövid élettartamra van tervezve, lenyegében nem is kell hozzá üveggel borított napcella.
+		Egyelőre az ilyen üveggel védett anyaggal nem volt pattintási probálkozás.
+		A téma további részletei is szóba kerültek: egy Zsebi-re való cella-készlet van 
+		tartalékban, de ezek picik, es sok, kritikus munkát igénylő feladat lesz a megfelelő 
+		elhelyezés és huzalozás. Kétféle ragaszto anyag került elő, az egyik szilikon alapú, 
+		hőszigetelő és elektromosan is szigetelóő, a kialakult vélemeny szerint ez lenne a 
+		kedvezőbb. A másik két komponenses vezető tulajdonságú műgyanta ragasztó. Ennek az 
+		lenne az előnye, hogy a cellák hátoldala már a ragasztáskor össze lenne kötve.
+		</p>
+		<p class="left">
+		A Tanár úr ugyancsak bemutatta a frissen vásárolt Li-polimer aksit is. 
+		Ez méretre pici, és a kapacitása is kissebb a kivánatosnál. 
+		A probléma az vele, hogy a következő kapacitás-fokozatnak a mérete 
+		hosszanti irányban növekszik, és ez már nem fér bele a Zsebi kubaturájába. 
+		Szóbajöhet a megvásárolt méretűből kettő párhuzamos kapcsolása. A NASA kedvező 
+		tapasztalatokról ir a Li-polimer aksik space-beli használatáról.
+		Az egyetemen van vakuum kamra, szinte azonnal lehetne indítani töltési és kisütési teszteket a vakuum kamrában.
+		Végül nem vetettük el további Li-Ion aksik felkutatását sem, lehetséges alternatíva a Sony NP50 900 mA-es kamera aksija.
+		</p>
+		<p class="left">
+		Bemutatta a core-team új tagjait, es megvitatásra került a feladatuk, ill. a következő alkalmakra keszítendő prezentációik:
+		<br>
+		</p>
+		<ul class="general">
+			<li>a kommunikácios protokollról,</li>
+			<li>a power management főbb összetevőiről, blokkvázlatáról</li>
+			<li>EPS kapcsolási vázalatát bemutatni, megvitatni.</li>
+		</ul>
+		<p class="left">
+		Szóbakerült egy részletkérdés, a rádiós IC-n keletkező hő kezelése.
+		Tervben van egy un. Design Review, amikoris az egyik megbeszélésre meghívnánk a 
+		témához értőket, és azok véleményt mondanának a tervekről, ill. részletekről is.
+		Ugyancsak szóbakerültek a rázás tesztekhez készült felfogó szerkezet munkálatai: 
+		kétféle rázópad van, ezekhez esetleg módosítani kell a tervet.
+		</p>
+		<p class="left">
+		Visszatéro téma a kockára felkerülő antennák elhelyezése, a kidobó szerkezetben való "becsomagolása".
+		Az egyik verzió szerint a kidobó szerkezet (POD) három darab hasonló méretű kockát hordoz. 
+		Ebben az esetben, ha a Zsebi az első lehetne, akkor vissza lehetne hajtani úgy az antennákat, 
+		hogy a következő két kocka mellett épp elférnének. Természetesen nem megengedett, hogy valamiféle 
+		sérülést okozzon. A szabvány megengedi, hogy az 5x5x5 cm-es kocka 5 oldala mellett 7-7 mm-es további 
+		rést is igénybe vegyenek a holdak készítői. Ebben el lehetne helyezni az antennákat, esetleg 
+		egy vékony, műanyag dobozban, csomagolásban (?).  Ha az ISS-ről kerül pályára, ott megint 
+		mások a körülmények, a robotkarok a cubesatokhoz készült kidobó dobozokat használják.
+		A cubesatok esetében bevált antenna kioldási technika, - az elégetett műanyag zsinorokkal - 
+		nagyon kockázatos a pici holdakon, mert a pályára kerülést megelőző  hosszú, bizonytalan 
+		várakozás alatt elveszíthetik az aksi töltését, és nem lesz energia az antenna nyitási művelethez.
+		Probléma az, hogy a pocket holdak esetében eltérőek a viszonyok a cubesatokhoz képest, és 
+		eddig senki nem gondolta végig a fenti feladatokat, problémákat.
+		Újabb ötleteket kellene kitalálni/gyűjteni.
+		</p>
+		<p class="left">
+		Az utolsó téma a tetőn lévő 3 m-es parabola tartójának/mechanikájának áttervezése. 
+		Ezt úgy kell végezni, hogy alkalmas legyen egy tervezett nagyobb, 4 vagy akár 5 m-es tükör rögzítésére is.
+		Bb tájékozódott az alibabán ilyen méretű rácsos parabolák elérhetőségéről. Kedvezőek a 
+		tapasztalatai, ami az árakat illeti, de a szállítás meglepően költséges. Úgy tűnik, egy 
+		ilyen szerkezet kb 70-100 kg súlyt képvisel, ezt a kínaiak hajóval hozzák, és kb 6 hét 
+		alatt érhet ide, a szállítás díja meghaladja az áru értékét.
+		Ugyancsak szóbakerült az antenna kalibrálása. A Petőfi híd másik oldalán az ELTE 
+		tetején van egy 3 m-es ilyen parabola, annak a kalibrációjáról is szó esett. 
+		Amerikaiak végezték, geostacionárius hold ismert poziciójához mérték be.
+		</p>
+		<br>
+		<a class="linkred" href="/smog1/pictures/articles/20150221_Smog-1_munkamegbeszeles.jpg" onclick="window.open(this.href); return false;">
+			<img src="/smog1/pictures/articles/20150221_Smog-1_munkamegbeszeles_little.jpg" width="360" height="270" alt="Műhold akkumulátor tömeg mérés" title="Műhold akkumulátor tömeg mérés">
+		</a> 
+		<p class="left">Budapest  2015. február 20.</p>
+		<p class="sign">Tölgyesi János (HG5APZ)</p>
+	</div>
+			
+		
+			<div id="footer">
+				<p class="foottext">SMOG-1 pocketqube | 1111 Budapest, Egry József utca 1. 12.emelet | Tel.: +36 1 463-2917 | bmegnd@gmail.com</p>
+				<p><a href="http://validator.w3.org/check?uri=referer"><img src="/smog1/pictures/icons/valid-html401.png" alt="Valid HTML 4.01 Strict" height="31" width="88"></a></p>
+				<!-- Piwik -->
+				<script type="text/javascript">
+				  var _paq = _paq || [];
+				  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+				  _paq.push(["setCookieDomain", "*.gnd.bme.hu"]);
+				  _paq.push(['trackPageView']);
+				  _paq.push(['enableLinkTracking']);
+				  (function() {
+					var u="//gnd.bme.hu/analytics/piwik/";
+					_paq.push(['setTrackerUrl', u+'piwik.php']);
+					_paq.push(['setSiteId', 2]);
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+				  })();
+				</script>
+				<noscript><p><img src="//gnd.bme.hu/analytics/piwik/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+				<!-- End Piwik Code -->
+			</div>
+		</div>
+	</body>
+</html>

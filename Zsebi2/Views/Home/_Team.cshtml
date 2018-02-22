@@ -1,0 +1,66 @@
+﻿@model TeamViewModel
+
+<section class="teamSection" id="team">
+    <header>
+        <h1 hidden>Team section</h1>
+    </header>
+    <article class="clearfix team col-m-100 col-p-60">
+        <header>
+            <h2 hidden> Team Members</h2>
+            <figure>
+                <img style="width: 20%;" src="~/images/smog_logo_white_csapat.png">
+                <img style="width: 73%; position: relative; left: 5%;" src="~/images/dots_csapat.png">
+            </figure>
+        </header>
+
+       @foreach (var subsystem in Model.SubSystems)
+       {
+        
+        <h2 class="subsystemHeader">@subsystem.SystemName 
+            @if (!String.IsNullOrEmpty(subsystem.Name))
+            {
+                <img class="commonArrow" src='~/images/arrow_news_right.png' />
+
+                @subsystem.Name
+            }
+        </h2>
+
+            @foreach (var member in subsystem.Members)
+            {
+                <figure class="smallMember col-m-25 col-p-13">
+                    <img class="rounded" src="@member.Image">
+                    <figcaption>
+                        @member.Name
+                        <p>@member.Post</p>
+                    </figcaption>
+                </figure>
+            }
+       
+       }
+
+        @*<figure class="smallMember col-m-25 col-p-13">
+            <a href="teammember.html"><img class="rounded" src="~/images/team/GschwindtAndras.jpg"> </a>
+            <figcaption>
+                Gschwindt András
+                <p>SMOG-1 projektvezető</p>
+            </figcaption>
+        </figure>
+
+        <!-- <h2 class="leftteam">Kommunikáció (COM)</h2> -->
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/DudasLevente.jpg" width="80" height="103" alt="Dudás LeventeGschwindt András" title="Dudás Levente"><figcaption>Dudás Levente (HA7WEN)<p class="teamtext">Kommunikáció és Spektrummonitor kísérlet felelős</p><p class="teamtextemail">Email cím: dudas@mht.bme.hu</figcaption></figure>
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/SzucsLaszlo.jpg" width="71" height="100" alt="Szűcs LászlóGschwindt András" title="Szűcs László"><figcaption>Szűcs László<p class="teamtext">Műhold antenna tervezés</p><p class="teamtextemail">Email cím: szucs@mht.bme.hu</figcaption></figure>
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/no_picture_male.jpg" width="80" height="76" alt="Légrádi MátéGschwindt András" title="Légrádi Máté"><figcaption>Légrádi Máté<p class="teamtext">Műhold antenna tervezés</figcaption></figure>
+        <!-- <h2 class="leftteam">Fedélzeti számítógép (OBC)</h2> -->
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/KristofTimur.jpg" width="80" height="80" alt="Kristóf TimurGschwindt András" title="Kristóf Timur"><figcaption>Kristóf Timur<p class="teamtext">Fejlesztő</figcaption></figure>
+        <!-- <h2 class="leftteam">Hőtechnika és Mechanikai modellezés (MECH)</h2> -->
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/no_picture_male.jpg" width="80" height="76" alt="Kovács RóbertGschwindt András" title="Kovács Róbert"><figcaption>Kovács Róbert<p class="teamtext">Csoportvezető</p><p class="teamtextemail">Email cím: kovacsrobert@gnd.bme.hu</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/JagerDavid.jpg" width="75" height="100" alt="Jáger DávidGschwindt András" title="Jáger Dávid"><figcaption>Jáger Dávid<p class="teamtext">Hőtechnikai VEM analízis, mérések támogatása.</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/TorokPeter.jpg" width="80" height="103" alt="Török PéterGschwindt András" title="Török Péter"><figcaption>Török Péter<p class="teamtext">Hőtechnikai VEM analízis, mérések támogatása.</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/no_picture_male.jpg" width="80" height="76" alt="Kiss BotondGschwindt András" title="Kiss Botond"><figcaption>Kiss Botond<p class="teamtext">Rázógép készülék gyártástámogatása.</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/no_picture_male.jpg" width="80" height="76" alt="Kun GergelyGschwindt András" title="Kun Gergely"><figcaption>Kun Gergely<p class="teamtext">Műhold szimulátor fejlesztése, hőtechnikai elemzés</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/JozsaViktor.jpg" width="67" height="100" alt="Józsa ViktorGschwindt András" title="Józsa Viktor"><figcaption>Józsa Viktor<p class="teamtext">Csoportvezető</p><p class="teamtextemail">Email cím: jozsa@energia.bme.hu</figcaption></figure>
+        <!-- <h2 class="leftteam">Napelemek modellezése, energiaegyensúly (ENERGY)</h2> -->
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/OlasziBalint.jpg" width="80" height="73" alt="Olaszi BálintGschwindt András" title="Olaszi Bálint"><figcaption>Olaszi Bálint<p class="teamtext">Napelemek vizsgálata, energiamenedzsment</figcaption></figure>
+        <!-- <h2 class="leftteam">Energiaellátás (EPS)</h2> -->
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/HermanTibor.jpg" width="80" height="80" alt="Herman TiborGschwindt András" title="Herman Tibor"><figcaption>Herman Tibor<p class="teamtext">Fejlesztő</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/GeczyGabor.jpg" width="80" height="80" alt="Géczy GáborGschwindt András" title="Géczy Gábor"><figcaption>Géczy Gábor<p class="teamtext">Fejlesztő</figcaption></figure>
+        <!-- <h2 class="leftteam">Külső szakértők ()</h2> -->
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/MucsBela.jpg" width="80" height="81" alt="Mucs BélaGschwindt András" title="Mucs Béla"><figcaption>Mucs Béla (HA4BM)<p class="teamtext">Tanácsadó</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/no_picture_male.jpg" width="80" height="76" alt="Nemcsics ÁkosGschwindt András" title="Nemcsics Ákos"><figcaption>Nemcsics Ákos<p class="teamtext">Napelemek</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/no_picture_male.jpg" width="80" height="76" alt="Csizmadia ElekGschwindt András" title="Csizmadia Elek"><figcaption>Csizmadia Elek<p class="teamtext">Mágneses anyagok</figcaption></figure>
+        <!-- <h1 class="center">Műholdvezérlő állomás</h1><h2 class="leftteam">Műholdvezérlő állomás (GND)</h2> -->
+        <figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/HodlEmilViktor.jpg" width="80" height="100" alt="Hödl Emil ViktorGschwindt András" title="Hödl Emil Viktor"><figcaption>Hödl Emil Viktor<p class="teamtext">Operátor, webmester, rendszergazda</p><p class="teamtextemail">Email cím: hodlemil@gnd.bme.hu</figcaption></figure><figure class="smallMember col-m-25 col-p-13"><img class="teampics" src="~/images/team/no_picture_male.jpg" width="80" height="76" alt="László GyulaGschwindt András" title="László Gyula"><figcaption>László Gyula<p class="teamtext">Parabola antenna befogó szerkezetének tervezése</figcaption></figure>*@
+    </article>
+</section>

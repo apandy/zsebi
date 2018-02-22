@@ -1,0 +1,55 @@
+@model Zsebi2.Models.Article
+
+@{
+    ViewData["Title"] = "Details";
+}
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Details</h2>
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HtmlBody)
+        </dt>
+        <dd>
+            @Html.Raw(Model.HtmlBody)
+            @*@Html.DisplayFor(model => model.HtmlBody)*@
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PublishDate)
+        </dd>
+        <dt>
+
+            Thumbnail
+        </dt>
+        <dd>
+            <img src="~/images/@Model.ThumbnailFileName" />
+            <p>@Html.DisplayFor(model => model.ThumbnailFileName)</p>
+        </dd>
+        <dt>
+            
+            @Html.DisplayNameFor(model => model.Excerpt)
+        </dt>
+        <dd>
+            @Html.Raw(Model.Excerpt)
+            @*Html.DisplayFor(model => model.Excerpt)*@
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
