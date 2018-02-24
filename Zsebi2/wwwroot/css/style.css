@@ -236,13 +236,17 @@ figcaption {
 
 .satDiv {
     height: 31rem;
-    background-image: url(../images/placeholder_satellite.png);
+    /*background-image: url(../images/placeholder_satellite.png);
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 100% 100%;
+    background-size: cover;*/
     position: relative;
     left: 20%
 }
+
+    .satDiv img {
+        width: 100%;
+    }
 
 
 section.technicalSection {
