@@ -879,6 +879,18 @@ article.popup {
     .col-p-90 {
         width: 90%;
     }
+
+    .col-scr-em10 {
+        width: 10em;
+    }
+
+    .col-scr-em20 {
+        width: 20em;
+    }
+
+    .col-scr-em23 {
+        width: 23em;
+    }
 }
 
 .bigMember {
