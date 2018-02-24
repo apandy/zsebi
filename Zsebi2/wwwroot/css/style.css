@@ -248,6 +248,10 @@ figcaption {
         width: 100%;
     }
 
+.satArticle header {
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+}
 
 section.technicalSection {
     background: none;
