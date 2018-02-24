@@ -104,6 +104,9 @@ h2 {
         color: #2F2F2F;
     }
 
+.anchor {
+    position: relative;
+    top: -58px;
 }
 
 /* section {
