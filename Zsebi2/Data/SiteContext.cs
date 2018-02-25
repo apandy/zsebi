@@ -20,8 +20,6 @@ namespace Zsebi2.Data
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			modelBuilder.Entity<Article>().ToTable("Articles");
-			modelBuilder.Entity<TeamMember>().ToTable("Team");
 		}
 
 		//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
