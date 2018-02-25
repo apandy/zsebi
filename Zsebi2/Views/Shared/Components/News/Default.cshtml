@@ -1,23 +1,22 @@
 ﻿@model IEnumerable<Zsebi2.Models.Article>
 
 <script type="text/javascript">
-    function attachAjaxCalls()
-    {
-       $('#news-next-container a').on('click', function(e){
-           e.preventDefault();
-           $('#news_container')
-           .load($(this).attr('href'));
-       });
+    function attachAjaxCalls() {
+        $('#news-next-container a').on('click', function (e) {
+            e.preventDefault();
+            $('#news_container')
+                .load($(this).attr('href'));
+        });
 
-       $('#news-prev-container a').on('click', function(e){
-           e.preventDefault();
-           $('#news_container')
-           .load($(this).attr('href'));
-       });
+        $('#news-prev-container a').on('click', function (e) {
+            e.preventDefault();
+            $('#news_container')
+                .load($(this).attr('href'));
+        });
 
     }
 
-    $(function (){attachAjaxCalls(); })
+    $(function () { attachAjaxCalls(); });
 
 </script>
 
@@ -35,11 +34,11 @@
             </h2>
         </header>
 
-        @if ((bool) ViewData["hasPreviousPage"])
+        @if ((bool)ViewData["hasPreviousPage"])
         {
             <div id="news-prev-container" style="display: inline-block; position: absolute; top: 50%; left: 2%;">
                 <a href='@Url.Action("Index", "News", new {page = ViewData["previousPage"]})'>
-                    <img src='~/images/arrow_news_left.png'/>
+                    <img src='~/images/arrow_news_left.png' />
                 </a>
             </div>
         }
@@ -69,11 +68,11 @@
             </div>
         }
 
-        @if ((bool) ViewData["hasNextPage"])
+        @if ((bool)ViewData["hasNextPage"])
         {
             <div id="news-next-container" style="display: inline-block; position: absolute; top: 50%; right: 2%;">
                 <a href='@Url.Action("Index", "News", new {page = ViewData["nextPage"]})'>
-                    <img src='~/images/arrow_news_right.png'/>
+                    <img src='~/images/arrow_news_right.png' />
                 </a>
             </div>
         }

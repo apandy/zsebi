@@ -19,26 +19,26 @@
 
             <h2 class="subsystemHeader">
                 @subsystem.SystemName
-            @if (!String.IsNullOrEmpty(subsystem.Name))
+                @if (!String.IsNullOrEmpty(subsystem.Name))
+                {
+                    <img class="commonArrow" src='~/images/arrow_news_right.png' />
+
+                    @subsystem.Name
+                }
+            </h2>
+
+            foreach (var member in subsystem.Members)
             {
-                <img class="commonArrow" src='~/images/arrow_news_right.png' />
-
-                @subsystem.Name
+                <figure class="smallMember col-m-25 col-p-13">
+                    <img class="rounded" src="@member.Image">
+                    <figcaption>
+                        @member.Name
+                        <p>@member.Post</p>
+                    </figcaption>
+                </figure>
             }
-        </h2>
 
-        @foreach (var member in subsystem.Members)
-        {
-            <figure class="smallMember col-m-25 col-p-13">
-                <img class="rounded" src="@member.Image">
-                <figcaption>
-                    @member.Name
-                    <p>@member.Post</p>
-                </figcaption>
-            </figure>
         }
-
-    }
 
         @*<figure class="smallMember col-m-25 col-p-13">
                 <a href="teammember.html"><img class="rounded" src="~/images/team/GschwindtAndras.jpg"> </a>

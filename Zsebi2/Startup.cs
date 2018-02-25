@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,15 +18,15 @@ namespace Zsebi2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-			services.AddDbContext<SiteContext>(options =>
-				Microsoft.EntityFrameworkCore.MySqlDbContextOptionsExtensions.UseMySql(
-					options,
-					Configuration.GetSection("Database").GetValue<string>("ConnectionString")
-					//@"Server=localhost;database=zsebi;uid=root;pwd=admin;"
-				)
-			);
+            services.AddDbContext<SiteContext>(options =>
+                Microsoft.EntityFrameworkCore.MySqlDbContextOptionsExtensions.UseMySql(
+                    options,
+                    Configuration.GetSection("Database").GetValue<string>("ConnectionString")
+                //@"Server=localhost;database=zsebi;uid=root;pwd=admin;"
+                )
+            );
 
-			services.AddMvc();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

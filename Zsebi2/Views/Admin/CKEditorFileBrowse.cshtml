@@ -1,4 +1,4 @@
-﻿@model IEnumerable<string> 
+﻿@model IEnumerable<string>
 @{
     Layout = null;
 }
@@ -29,8 +29,10 @@
 <body>
     @foreach (var picName in Model)
     {
-        <button title="@picName" onclick="returnFileUrl('/images/uploaded/@picName')"><img src="~/images/uploaded/@picName" height="100"/></button>
+        <button title="@picName" onclick="returnFileUrl('/images/uploaded/@picName')">
+            <img src="~/images/uploaded/@picName" height="100"/>
+        </button>
     }
-    
+
 </body>
 </html>

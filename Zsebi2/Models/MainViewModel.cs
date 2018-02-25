@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Zsebi2.Models
 {
-	public class MainViewModel
+    public class MainViewModel
 	{
 		public TeamViewModel Team { get; set; }
 	}
