@@ -158,6 +158,8 @@ a#menulink:link, a#menulink:visited {
 }
 
 nav.bar li {
+    position: relative;
+    float: left;
     font-family: pantonBlack;
     font-size: 1.8rem;
     font-weight: 300;
