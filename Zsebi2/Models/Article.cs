@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Zsebi2.Models
 {
-	[Table("articles")]
+	[Table("Articles")]
     public class Article
 	{
 		public int ID { get; set; }
@@ -18,7 +18,7 @@ namespace Zsebi2.Models
 		public string ThumbnailFileName { get; set; }	
 
 		public string Excerpt { get; set; }
-		
+
 		public string MoreInfoUrl { get; set; }
 	}
 }

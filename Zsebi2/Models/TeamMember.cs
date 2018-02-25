@@ -2,12 +2,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Zsebi2.Models
 {
-    [Table("team")]
+    [Table("Team")]
     public class TeamMember
     {
 		[Column("id")]
         public int Id { get; set; }
-        
+
 		[Column("name")]
         public string Name { get; set; }
 

@@ -10,7 +10,7 @@ namespace Zsebi2.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "articles",
+                name: "Articles",
                 columns: table => new
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
@@ -24,11 +24,11 @@ namespace Zsebi2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_articles", x => x.ID);
+                    table.PrimaryKey("PK_Articles", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
-                name: "team",
+                name: "Team",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -44,17 +44,17 @@ namespace Zsebi2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_team", x => x.id);
+                    table.PrimaryKey("PK_Team", x => x.id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "articles");
+                name: "Articles");
 
             migrationBuilder.DropTable(
-                name: "team");
+                name: "Team");
         }
     }
 }

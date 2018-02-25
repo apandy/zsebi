@@ -40,7 +40,7 @@ namespace Zsebi2.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("articles");
+                    b.ToTable("Articles");
                 });
 
             modelBuilder.Entity("Zsebi2.Models.TeamMember", b =>
@@ -75,7 +75,7 @@ namespace Zsebi2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("team");
+                    b.ToTable("Team");
                 });
 #pragma warning restore 612, 618
         }
