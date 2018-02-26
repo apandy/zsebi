@@ -10,6 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB", "DB", "{90232CE1-2D7B-
 		DB\Dump20180222.sql = DB\Dump20180222.sql
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OriginalDesign", "OriginalDesign", "{393B9C81-C8DF-4E1B-ABF2-AB78A93F3591}"
+	ProjectSection(SolutionItems) = preProject
+		OriginalDesign\smog1.zip = OriginalDesign\smog1.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
