@@ -17,25 +17,24 @@
 @Html.Partial("_ContactMenu")
 
 @section Scripts {
-    
-<script type="text/javascript">
-    function attachAjaxCalls() {
-        $('#news_container').on('click', '#news-next-container a', function (e) {
-            e.preventDefault();
-            $('#news_container')
-                .load($(this).attr('href'));
-        });
 
-        $('#news_container').on('click', '#news-prev-container a', function (e) {
-            e.preventDefault();
-            $('#news_container')
-                .load($(this).attr('href'));
-        });
+    <script type="text/javascript">
+        function attachAjaxCalls() {
+            $('#news_container').on('click', '#news-next-container a', function (e) {
+                e.preventDefault();
+                $('#news_container')
+                    .load($(this).attr('href'));
+            });
 
-    }
+            $('#news_container').on('click', '#news-prev-container a', function (e) {
+                e.preventDefault();
+                $('#news_container')
+                    .load($(this).attr('href'));
+            });
+        }
 
-    $(function () { attachAjaxCalls(); });
+        $(function () { attachAjaxCalls(); });
 
-</script>
+    </script>
 
 }

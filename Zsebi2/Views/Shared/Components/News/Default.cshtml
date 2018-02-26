@@ -22,32 +22,37 @@
                 </a>
             </div>
         }
+        <div class="row news-row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-xs-12" id="news-@(item.ID)">
+                    <figure>
+                        <img class="borderimg1" style="max-height: 100px; width: auto" src="@item.ThumbnailFileName">
+                    </figure>
+                    <header>
 
-        @foreach (var item in Model)
-        {
-            <div class="smallNews">
-                <figure>
-                    <img class="borderimg1" style="max-height: 100px; width: auto" src="@item.ThumbnailFileName">
-                </figure>
-                <header>
-
-                    @*<a href="@item.MoreInfoUrl">*@
-                    @*<a href="@Url.Action("Details", "News", new { ID = item.ID} )">*@
-                    <a href="@Url.Action("Details", "Article", new {ID = item.ID})">
-                        <h3>@item.Title</h3>
-                    </a>
-                </header>
-                <p>
-                    @Html.Raw(item.Excerpt)
-                </p>
-                <div>
+                        @*<a href="@item.MoreInfoUrl">*@
+                        @*<a href="@Url.Action("Details", "News", new { ID = item.ID} )">*@
+                        <a href="@Url.Action("Details", "Article", new {ID = item.ID})">
+                            <h3>@item.Title</h3>
+                        </a>
+                    </header>
+                    <p>
+                        @Html.Raw(item.Excerpt)
+                    </p>
+                </div>
+            }
+        </div>
+        <div class="row social-row">
+            @foreach (var item in Model)
+            {
+                <div class="col-md-4 col-xs-12">
                     <a href="http://www.facebook.com"><img src="~/images/icon_facebook.png"></a>
                     <a href="http://www.twitter.com"><img src="~/images/icon_twitter.png"></a>
                     <a href="http://www.plus.google.com"><img src="~/images/icon_googleplus.png"></a>
                 </div>
-            </div>
-        }
-
+            }
+        </div>
         @if ((bool)ViewData["hasNextPage"])
         {
             <div id="news-next-container" style="display: inline-block; position: absolute; top: 50%; right: 2%;">
