@@ -1,5 +1,3 @@
-using System;
-
 namespace Zsebi2.Models
 {
     public class ErrorViewModel

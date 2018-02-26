@@ -14,14 +14,14 @@
         <h4>Article</h4>
         <hr />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <input type="hidden" asp-for="ID" />
+        <input type="hidden" asp-for="ID" />
         <div class="form-group">
             <label asp-for="Title" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
-        </div>  
+        </div>
         <div class="form-group">
             <label asp-for="PublishDate" class="col-md-2 control-label"></label>
             <div class="col-md-10">
@@ -32,13 +32,13 @@
         <div class="form-group">
             <label class="col-md-2 control-label">Thumbnail</label>
             <div class="col-md-10">
-                <input type="hidden" asp-for="ThumbnailFileName" />                
+                <input type="hidden" asp-for="ThumbnailFileName" />
                 <img src="@Model.ThumbnailFileName" id="ThumbnailImage" height="100" />
                 <input class="btn btn-default" type="button" onclick="browseImages()" value="Böngészés a Szerveren" />
                 <input class="btn btn-default" type="button" onclick="uploadImage()" value="Feltöltés" />
 
             </div>
-            
+
         </div>
         <div class="form-group">
             <label asp-for="Excerpt" class="col-md-2 control-label"></label>
@@ -68,14 +68,13 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {    
-    
+@section Scripts {
+
     <script>
-        function browseImages()
-        {
+        function browseImages() {
             window.open('/Admin/FileBrowse?type=Images');
         }
-      
+
         function handleImageSelection(fileUrl) {
             window.document.getElementById("ThumbnailFileName").value = fileUrl;
             window.document.getElementById("ThumbnailImage").src = fileUrl;
@@ -96,17 +95,18 @@
             }
         }
 
-    </script>    
+    </script>
     @*<script type="text/javascript">
-           $(function () {
-               $('#PublishDate').datetimepicker();
-           });
-    </script>*@
+               $(function () {
+                   $('#PublishDate').datetimepicker();
+               });
+        </script>*@
 
 
-    <script>CKEDITOR.replace('HtmlBody', {
-        filebrowserBrowseUrl: '/Admin/CKEditorFileBrowse?type=Images',
-        filebrowserUploadUrl: '/Admin/CKEditorFileUpload?type=Images'
+    <script>
+        CKEDITOR.replace('HtmlBody', {
+            filebrowserBrowseUrl: '/Admin/CKEditorFileBrowse?type=Images',
+            filebrowserUploadUrl: '/Admin/CKEditorFileUpload?type=Images'
         });
-    </script>    
+    </script>
 }

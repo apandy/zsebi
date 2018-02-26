@@ -1,8 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Zsebi2.Models;
 
 namespace Zsebi2.Data
@@ -24,8 +20,6 @@ namespace Zsebi2.Data
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			modelBuilder.Entity<Article>().ToTable("Articles");
-			modelBuilder.Entity<TeamMember>().ToTable("Team");
 		}
 
 		//protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

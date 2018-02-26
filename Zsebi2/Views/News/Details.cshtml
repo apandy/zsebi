@@ -38,7 +38,7 @@
         </header>
         <div class="bigNews">
             <figure>
-                <img class="borderimg1" style="max-height:300px;width:auto" src="~/images/articles/@Model.ThumbnailFileName.Replace("_little", "")">   
+                <img class="borderimg1" style="max-height:300px;width:auto" src="~/images/articles/@Model.ThumbnailFileName.Replace("_little", "")">
             </figure>
             <header>
                 <h3>@Model.Title</h3>
@@ -52,8 +52,8 @@
             <p>
                 @Html.Raw(Model.HtmlBody)
             </p>
-            <a  class="headerLink" href="@Model.MoreInfoUrl" onclick="window.open(this.href); return false">MORE...</a>
+            <a class="headerLink" href="@Model.MoreInfoUrl" onclick="window.open(this.href); return false">MORE...</a>
         </div>
-        
+
     </article>
 </section>

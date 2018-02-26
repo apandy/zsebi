@@ -1,4 +1,4 @@
-﻿@model IEnumerable<string> 
+﻿@model IEnumerable<string>
 @{
     Layout = null;
 }
@@ -17,7 +17,7 @@
             return (match && match.length > 1) ? match[1] : null;
         }
         // Simulate user action of selecting a file to be returned to CKEditor.
-        function returnFileUrl(fileUrl) {           
+        function returnFileUrl(fileUrl) {
             window.opener.handleImageSelection(fileUrl);
             window.close();
         }
@@ -26,8 +26,10 @@
 <body>
     @foreach (var picName in Model)
     {
-        <button title="@picName" onclick="returnFileUrl('/images/uploaded/@picName')"><img src="~/images/uploaded/@picName" height="100"/></button>
+        <button title="@picName" onclick="returnFileUrl('/images/uploaded/@picName')">
+            <img src="~/images/uploaded/@picName" height="100"/>
+        </button>
     }
-    
+
 </body>
 </html>
