@@ -1,25 +1,5 @@
 ﻿@model IEnumerable<Zsebi2.Models.Article>
 
-<script type="text/javascript">
-    function attachAjaxCalls() {
-        $('#news-next-container a').on('click', function (e) {
-            e.preventDefault();
-            $('#news_container')
-                .load($(this).attr('href'));
-        });
-
-        $('#news-prev-container a').on('click', function (e) {
-            e.preventDefault();
-            $('#news_container')
-                .load($(this).attr('href'));
-        });
-
-    }
-
-    $(function () { attachAjaxCalls(); });
-
-</script>
-
 <div id="news" class="anchor"></div>
 <section class="newsSection">
     <header>

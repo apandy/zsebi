@@ -109,6 +109,10 @@ h2 {
     top: -58px;
 }
 
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
 /* section {
 	padding-top:30px
 } */
@@ -175,6 +179,13 @@ section.menuSection {
     font-family: pantonBlack;
     text-align: center;
     font-size: 1rem;
+}
+
+section.menuSection figure {
+    margin: 1em 40px;
+}
+section.menuSection .quote-caption {
+    margin: 1em 0;
 }
 
 ol {
