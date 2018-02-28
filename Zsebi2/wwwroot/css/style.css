@@ -56,8 +56,17 @@ body {
     margin-right: 15px;
 }
 
+/* obsolete*/
 .headerLink {
     text-decoration: none;
+    font-family: pantonBlack;
+    font-size: 1.5625rem;
+    font-weight: 300;
+    color: #2F2F2F;
+    line-height: 2.5em;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .socialsLine {
@@ -113,10 +122,10 @@ h2 {
     padding-left: 0;
     padding-right: 0;
 }
+
 /* section {
 	padding-top:30px
 } */
-
 /* ATTRIBUTES OF ELEMENTS DESCENDING LOCATION-WISE 
 MOBILE FIRST, so mobile attributes first */
 nav.bar {
@@ -181,12 +190,13 @@ section.menuSection {
     font-size: 1rem;
 }
 
-section.menuSection figure {
-    margin: 1em 40px;
-}
-section.menuSection .quote-caption {
-    margin: 1em 0;
-}
+    section.menuSection figure {
+        margin: 1em 40px;
+    }
+
+    section.menuSection .quote-caption {
+        margin: 1em 0;
+    }
 
 ol {
     margin: 0;
@@ -341,22 +351,23 @@ article.news {
     overflow: hidden;
 }
 
-.news-row figure {
-    display: inline-block;
-    padding: 0;
-    width: 100%;
-    margin: 0;
-}
-.news-row .social {
-    margin-bottom: 1em;
-}
+    .news-row figure {
+        display: inline-block;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    }
 
-.news-row p {
-    text-align: justify;
-    height: 25%;
-    max-height: 150px;
-    overflow: hidden;
-}
+    .news-row .social {
+        margin-bottom: 1em;
+    }
+
+    .news-row p {
+        text-align: justify;
+        height: 25%;
+        max-height: 150px;
+        overflow: hidden;
+    }
 
 h3 {
     text-align: left;
@@ -630,10 +641,47 @@ a:focus {
 
 article.popup {
     margin: auto;
-    background-image: url(../images/bg_kapcsolat.png);
+    background-image: url(/images/bg_kapcsolat.png);
     background-size: 100% 100%;
     padding-bottom: 2%;
 }
+
+.panel.panel-zsebi {
+    background-image: url(/images/bg_kapcsolat.png);
+    background-size: 100% 100%;
+    background-color: initial;
+    border: 0 none;
+}
+
+    .panel.panel-zsebi .panel-heading {
+        padding-top: 3%;
+        padding-left: 7%;
+    }
+
+    .panel.panel-zsebi .panel-title {
+        font-family: pantonBlack;
+        font-size: 1.25em;
+        font-weight: 300;
+        color: #2F2F2F;
+        max-width: 80%;
+    }
+
+    .panel.panel-zsebi p {
+        color: #2F2F2F;
+    }
+
+    .panel.panel-zsebi .panel-body {
+        padding-bottom: 20px;
+    }
+
+    .panel.panel-zsebi .back {
+        text-decoration: none;
+        font-family: pantonBlack;
+        font-size: 1.5625rem;
+        font-weight: 300;
+        color: #2F2F2F;
+        padding: 0.1rem 0.5rem;
+    }
 
 .col-m-8 {
     width: 8.33%;
@@ -959,8 +1007,7 @@ figure.smallMember img {
 }
 
 .articleDetails {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 65px;
 }
 
 figure.smallMember {

@@ -1,49 +1,27 @@
 ﻿@model Zsebi2.Models.Article
 
 @{
-    Layout = null;
+    //Layout = null;
 }
-
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@Model.Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/style.css">
-</head>
-<body>
-
-    <section class="articleDetails">
-        <article class="popup col-m-100 col-p-60">
-            <header>
-                <h2>
-                    <div class="previous ib"><a class="headerLink" href="@Url.Action("Index","Home")#news">VISSZA</a></div>
-                </h2>
-            </header>
-            <div class="bigNews">
-                <header>
-                    <h3>
-                        @Model.Title
-                    </h3>
-                </header>
-                <div class="socialsLine">
-                    <a href="http://www.facebook.com"><img src="~/images/icon_facebook.png"></a>
-                    <a href="http://www.twitter.com"><img src="~/images/icon_twitter.png"></a>
-                    <a href="http://www.plus.google.com"><img src="~/images/icon_googleplus.png"></a>
-                    2017.07.11
-                </div>
-                <p>
-                    @Html.Raw(Model.HtmlBody)
-                </p>
+<section class="container articleDetails">
+    <article class="panel panel-zsebi">
+        <header class="clearfix panel-heading">
+            <h3 class="pull-left panel-title">
+                @Model.Title
+            </h3>
+            <a class="pull-right back" href="@Url.Action("Index","Home")#news">VISSZA</a>
+        </header>
+        <div class="panel-body">
+            <div class="socialsLine">
+                <a href="http://www.facebook.com"><img src="~/images/icon_facebook.png"></a>
+                <a href="http://www.twitter.com"><img src="~/images/icon_twitter.png"></a>
+                <a href="http://www.plus.google.com"><img src="~/images/icon_googleplus.png"></a>
+                2017.07.11
             </div>
-        </article>
+            <p>
+                @Html.Raw(Model.HtmlBody)
+            </p>
+        </div>
+    </article>
 
-    </section>
-    @*<div>
-            <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
-            <a asp-action="Index">Back to List</a>
-        </div>*@
-</body>
-</html>
+</section>
