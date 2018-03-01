@@ -1,6 +1,11 @@
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +14,7 @@ using Zsebi2.Models;
 
 namespace Zsebi2.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private readonly SiteContext _context;
@@ -27,53 +33,59 @@ namespace Zsebi2.Controllers
             return View(await _context.Articles.OrderByDescending(a => a.PublishDate).ToListAsync());
         }
 
-        //private void MigrateDb()
-        //{
-        //	foreach(var news in _context.NewsList.ToList())
-        //	{
-        //		try
-        //		{
-
-        //			var pos1 = news.newstext.IndexOf("<p class=\"newstext\">") + "<p class=\"newstext\">".Length;
-        //			var text = news.newstext.Substring(pos1, news.newstext.IndexOf("</p>", pos1) - pos1);
-
-        //			pos1 = news.newstext.IndexOf("<h2 class=\"newstitle\">") + "<h2 class=\"newstitle\">".Length;
-        //			var pos2 = news.newstext.IndexOf("return false\">", pos1) + "return false\">".Length;
-        //			var title = (pos2 > "<h2 class=\"newstitle\">".Length) 
-        //				? news.newstext.Substring(pos2, news.newstext.IndexOf("</a>", pos2) - pos2)
-        //				: news.newstext.Substring(pos1, news.newstext.IndexOf("</h2>", pos1) - pos1);
-
-        //			pos1 = news.newstext.IndexOf("<img class=\"newspic\" src=\"") + "<img class=\"newspic\" src=\"".Length;
-        //			var imgSrc = news.newstext.Substring(pos1, news.newstext.IndexOf("\"", pos1) - pos1);
-        //			imgSrc = imgSrc.Substring(imgSrc.LastIndexOf("/") + 1);
-
-        //			pos1 = news.newstext.IndexOf("<p class=\"date\">") + "<p class=\"date\">".Length;
-        //			var date = DateTime.Parse(news.newstext.Substring(pos1, news.newstext.IndexOf("</p>", pos1) - pos1));
-
-        //			pos1 = news.newstext.IndexOf("<a class=\"more\" href=\"") + "<a class=\"more\" href=\"".Length;
-        //			var moreLink = (pos1 > "<a class=\"more\" href=\"".Length)
-        //				? news.newstext.Substring(pos1, news.newstext.IndexOf("\"", pos1) - pos1).Replace("smog1/articles/", "articles/")
-        //				: default(string);
-
-        //			_context.Posts.Add(new Post
-        //			{
-        //				Title = title,
-        //				ThumbnailFileName = imgSrc,
-        //				PublishDate = date,
-        //				HtmlBody = text,
-        //				Excerpt = text.Substring(0, Math.Min(200, text.Length)),
-        //				MoreInfoUrl = moreLink
-        //			});
-        //		}
-        //		catch (Exception ex)
-        //		{
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult Login()
+        {
+            return View(new LoginViewModel());
+        }
 
 
-        //		}
-        //	}
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name,model.Email) ,
+                new Claim(ClaimTypes.Email,model.Email)
+            };
 
-        //	_context.SaveChanges();
-        //}
+            //init the identity instances 
+            var userPrincipal = new ClaimsPrincipal(new ClaimsIdentity(claims, "SingeLogin"));
+            await HttpContext.SignInAsync(userPrincipal, new AuthenticationProperties
+            {
+                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30),
+                AllowRefresh = true
+            });
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Profile()
+        {
+            return View(new ProfileViewModel());
+        }
+        [HttpPost]
+        public IActionResult Profile(ProfileViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            return View(model);
+        }
 
         // GET: Admin/Details/5
         public async Task<IActionResult> Details(int? id)
