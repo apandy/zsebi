@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
-using Zsebi2.Data;
+using Zsebi2.DataLayer;
 
 namespace Zsebi2.Migrations
 {

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Zsebi2.Data;
+using Zsebi2.DataLayer;
 
 namespace Zsebi2.Models
 {

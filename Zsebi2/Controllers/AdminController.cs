@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Zsebi2.Data;
+using Zsebi2.DataLayer;
 using Zsebi2.Models;
 
 namespace Zsebi2.Controllers

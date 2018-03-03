@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Zsebi2.Models;
 
-namespace Zsebi2.Data
+namespace Zsebi2.DataLayer
 {
     public class SiteContext : DbContext
 	{

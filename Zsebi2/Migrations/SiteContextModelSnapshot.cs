@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using System;
-using Zsebi2.Data;
+using Zsebi2.DataLayer;
 
 namespace Zsebi2.Migrations
 {
@@ -20,7 +20,7 @@ namespace Zsebi2.Migrations
                 .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
                 .HasAnnotation("ProductVersion", "2.0.0-rtm-26452");
 
-            modelBuilder.Entity("Zsebi2.Models.Article", b =>
+            modelBuilder.Entity("Zsebi2.DataLayer.Article", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
@@ -43,7 +43,7 @@ namespace Zsebi2.Migrations
                     b.ToTable("Articles");
                 });
 
-            modelBuilder.Entity("Zsebi2.Models.TeamMember", b =>
+            modelBuilder.Entity("Zsebi2.DataLayer.TeamMember", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

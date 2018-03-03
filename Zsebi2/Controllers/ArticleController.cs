@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Zsebi2.Data;
+using Zsebi2.DataLayer;
 using Zsebi2.Models;
 
 namespace Zsebi2.Controllers

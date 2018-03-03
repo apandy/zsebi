@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Zsebi2.Models
+namespace Zsebi2.DataLayer
 {
 	[Table("Articles")]
     public class Article
