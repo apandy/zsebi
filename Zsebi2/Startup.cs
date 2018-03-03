@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Zsebi2.DataLayer;
+using Zsebi2.Services;
 
 namespace Zsebi2
 {
@@ -36,6 +37,7 @@ namespace Zsebi2
                     config.LoginPath = new PathString("/Admin/Login");
                     config.LogoutPath = new PathString("/Admin/Logout");
                 });
+            services.AddScoped(typeof(IUserServices), typeof(UserServices));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

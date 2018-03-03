@@ -2,7 +2,7 @@
 
 namespace Zsebi2.Models
 {
-    public class LoginViewModel
+    public class ProfileViewModel
     {
         [Required]
         [EmailAddress]
@@ -13,6 +13,12 @@ namespace Zsebi2.Models
         [Display(Name = "Password")]
         [Required]
         public string Password { get; set; }
-        
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Password 2")]
+        [Required]
+        [Compare(nameof(Password))]
+        public string PasswordRepeat { get; set; }
+
     }
 }

@@ -11,9 +11,10 @@ using Zsebi2.DataLayer;
 namespace Zsebi2.Migrations
 {
     [DbContext(typeof(SiteContext))]
-    partial class SiteContextModelSnapshot : ModelSnapshot
+    [Migration("20180303150550_DbUpdate002")]
+    partial class DbUpdate002
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

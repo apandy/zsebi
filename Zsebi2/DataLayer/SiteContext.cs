@@ -9,8 +9,11 @@ namespace Zsebi2.DataLayer
 		}
 
 	    public DbSet<Article> Articles => Set<Article>();
+
 		public DbSet<TeamMember> TeamMembers => Set<TeamMember>();
-        
-	}
+
+	    public DbSet<Option> Options => Set<Option>();
+
+    }
     
 }

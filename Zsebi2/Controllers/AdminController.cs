@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Zsebi2.DataLayer;
 using Zsebi2.Models;
+using Zsebi2.Services;
 
 namespace Zsebi2.Controllers
 {
@@ -18,12 +19,12 @@ namespace Zsebi2.Controllers
     public class AdminController : Controller
     {
         private readonly SiteContext _context;
+        private readonly IUserServices _userServices;
 
-        public AdminController(SiteContext context)
+        public AdminController(SiteContext context, IUserServices userServices)
         {
             _context = context;
-
-
+            _userServices = userServices;
         }
 
         // GET: Admin
@@ -48,10 +49,22 @@ namespace Zsebi2.Controllers
         {
             if (!ModelState.IsValid)
                 return View(model);
+            var adminUser = await _userServices.GetAdminUser();
+            if (adminUser != null)
+            {
+                if (model.Email != adminUser.Email ||
+                    !adminUser.CheckPassword(model.Password))
+                {
+                    ModelState.AddModelError(nameof(LoginViewModel.Password), "Invalid username or password");
+                    return View(model);
+                }
+            }
+
+            var email = adminUser?.Email ?? "<Email hiányzik>";
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name,model.Email) ,
-                new Claim(ClaimTypes.Email,model.Email)
+                new Claim(ClaimTypes.Name, email),
+                new Claim(ClaimTypes.Email, email)
             };
 
             //init the identity instances 
@@ -61,7 +74,7 @@ namespace Zsebi2.Controllers
                 ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30),
                 AllowRefresh = true
             });
-            return RedirectToAction("Index");
+            return adminUser != null ? RedirectToAction("Index") : RedirectToAction("Profile");
         }
 
         [HttpGet]
@@ -73,18 +86,24 @@ namespace Zsebi2.Controllers
         }
 
         [HttpGet]
-        public IActionResult Profile()
+        public async Task<IActionResult> Profile()
         {
-            return View(new ProfileViewModel());
+            var adminUser = await _userServices.GetAdminUser();
+            return View(new ProfileViewModel
+            {
+                Email = adminUser?.Email
+            });
         }
         [HttpPost]
-        public IActionResult Profile(ProfileViewModel model)
+        public async Task<IActionResult> Profile(ProfileViewModel model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
-            return View(model);
+
+            await _userServices.SaveAdminUser(model.Email, model.Password);
+            return RedirectToAction("Index");
         }
 
         // GET: Admin/Details/5
@@ -216,14 +235,7 @@ namespace Zsebi2.Controllers
         }
 
 
-        private string LocalUpladedFolderPath
-        {
-            get
-            {
-                return Path.Combine(Directory.GetCurrentDirectory(),
-                   "wwwroot\\images\\uploaded\\");
-            }
-        }
+        private string LocalUpladedFolderPath => Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\images\\uploaded\\");
 
 
         private string webBasePath = "/images/uploaded/";
