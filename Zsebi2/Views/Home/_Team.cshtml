@@ -1,5 +1,4 @@
 ﻿@model TeamViewModel
-
 <section class="teamSection">
     <div id="team" class="anchor"></div>
     <header>
@@ -13,31 +12,14 @@
                 <img style="width: 73%; position: relative; left: 5%;" src="~/images/dots_csapat.png">
             </figure>
         </header>
-
-        @foreach (var subsystem in Model.SubSystems)
-        {
-
-            <h2 class="subsystemHeader">
-                @subsystem.SystemName
-                @if (!String.IsNullOrEmpty(subsystem.Name))
-                {
-                    <img class="commonArrow" src='~/images/arrow_news_right.png' />
-
-                    @subsystem.Name
-                }
-            </h2>
-
-            foreach (var member in subsystem.Members)
-            {
-                <figure class="smallMember col-m-25 col-p-13">
-                    <img class="rounded" src="@member.Image">
-                    <figcaption>
-                        @member.Name
-                        <p>@member.Post</p>
-                    </figcaption>
-                </figure>
-            }
-
+        @{
+            Html.RenderPartial("_TeamSubSystem", Model.Active);
+        }
+        <h2 class="past-team-header">
+            Korábbi csapattagok
+        </h2>
+        @{
+            Html.RenderPartial("_TeamSubSystem", Model.Passive);
         }
     </article>
 </section>

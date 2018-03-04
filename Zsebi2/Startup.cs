@@ -38,6 +38,7 @@ namespace Zsebi2
                     config.LogoutPath = new PathString("/Admin/Logout");
                 });
             services.AddScoped(typeof(IUserServices), typeof(UserServices));
+            services.AddScoped(typeof(ITeamService), typeof(TeamService));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

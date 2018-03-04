@@ -49,3 +49,8 @@ article.news {
 .articleDetails {
     margin-top: 65px;
 }
+
+.news .glyphicon {
+    font-size: 2em;
+    color: #333;
+}

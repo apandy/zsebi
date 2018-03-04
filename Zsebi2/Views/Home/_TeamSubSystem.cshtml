@@ -1,0 +1,27 @@
+﻿@model List<SubSystem>
+
+@foreach (var subsystem in Model)
+{
+    <h2 class="team-header">
+        @subsystem.SystemName
+        @if (!String.IsNullOrEmpty(subsystem.Name))
+        {
+            <span class="glyphicon glyphicon-triangle-right"></span>
+            
+
+            @subsystem.Name
+        }
+    </h2>
+
+    foreach (var member in subsystem.Members)
+    {
+        <figure class="smallMember col-m-25 col-p-13">
+            <img class="rounded" src="@member.Image">
+            <figcaption>
+                @member.Name
+                <p>@member.Post</p>
+            </figcaption>
+        </figure>
+    }
+
+}

@@ -56,3 +56,11 @@ figure.smallMember figcaption p {
 figure.smallMember {
     float: none;
 }
+
+.past-team-header {
+    font-size: 2rem;
+}
+
+.team-header .glyphicon {
+    font-size: 1.3rem;
+}

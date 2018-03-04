@@ -19,7 +19,8 @@
         {
             <div id="news-prev-container" style="display: inline-block; position: absolute; top: 50%; left: 2%;">
                 <a asp-controller="News" asp-action="Index" asp-route-page="@ViewData["previousPage"]">
-                    <img src='~/images/arrow_news_left.png' />
+                    <span class="glyphicon glyphicon-triangle-left"></span>
+                    @*<img src='~/images/arrow_news_left.png' />*@
                 </a>
             </div>
         }
@@ -50,7 +51,8 @@
         {
             <div id="news-next-container" style="display: inline-block; position: absolute; top: 50%; right: 2%;">
                 <a asp-controller="News" asp-action="Index" asp-route-page="@ViewData["nextPage"]">
-                    <img src='~/images/arrow_news_right.png' />
+                    <span class="glyphicon glyphicon-triangle-right"></span>
+                    @*<img src='~/images/arrow_news_right.png' />*@
                 </a>
             </div>
         }

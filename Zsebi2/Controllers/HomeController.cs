@@ -1,38 +1,25 @@
 ﻿using System.Diagnostics;
-using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Zsebi2.DataLayer;
 using Zsebi2.Models;
+using Zsebi2.Services;
 
 namespace Zsebi2.Controllers
 {
     public class HomeController : Controller
     {
-        private SiteContext ctx;
+        private readonly ITeamService _teamService;
 
-        public HomeController(SiteContext ctx)
+        public HomeController(ITeamService teamService)
         {
-            this.ctx = ctx;
+            _teamService = teamService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var subSystems =
-                ctx.TeamMembers
-                .GroupBy(m => m.SubSystem).
-                Select(s => new SubSystem
-                {
-                    Name = s.Key,
-                    SystemName = s.First().System,
-                    Members = s.ToList()
-                }).ToList();
-
             var model = new MainViewModel
             {
-                Team = new TeamViewModel
-                {
-                    SubSystems = subSystems
-                }
+                Team = await _teamService.GetTeamViewModel()
             };
 
             return View(model);
