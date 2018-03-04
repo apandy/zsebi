@@ -1,0 +1,62 @@
+﻿
+section.amatuerSection {
+    opacity: 0.96;
+    background: #00A076;
+}
+
+article.amatuer {
+    margin: auto;
+}
+
+.amatuer > * {
+    vertical-align: middle;
+}
+
+.amatuer figure > * {
+    vertical-align: middle;
+}
+
+.amatuer h2 {
+    color: #FFFFFF;
+}
+
+.amatuer figure {
+    margin: 0;
+}
+
+.amatuer p {
+    width: 55%;
+    font-family: latoRegular;
+    font-size: 1rem;
+    color: #FFFFFF;
+    line-height: 1.1875rem;
+}
+
+.amatuer .button {
+    margin: 0;
+    width: 28%;
+    position: relative;
+    left: 10.5%;
+    text-align: center;
+}
+
+.amatuer .button a {
+    border: 3px solid #FFFFFF;
+    border-radius: 40px;
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    line-height: 250%;
+}
+
+.amatuer div.button a:hover {
+    background: #FFFFFF;
+    border-radius: 40px;
+    border-color: #FFFFFF;
+    /* #00DBA4;*/
+    color: #00A076;
+}
+
+.amatuer div.button a:active {
+    border-color: #2F2F2F;
+    color: #000000;
+}

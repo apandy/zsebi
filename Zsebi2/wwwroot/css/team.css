@@ -1,0 +1,58 @@
+﻿
+/* 2 options given by designer for background image, a png and the given css (???) */
+section.teamSection {
+    /*background-image: url(bg_csapat.png); */
+    background-image: radial-gradient(69% 94%, #00E1CB 0%, rgba(0,0,0,0.81) 95%);
+    margin: 0;
+    padding-bottom: 1.5%;
+}
+
+article.team {
+    margin: auto;
+    padding-top: 2%;
+}
+
+figure.smallMember {
+    display: inline-block;
+    margin: 1% 1.8% 0 1.8%;
+    /*height:330px;*/
+    /*float:left;*/
+}
+
+figure.smallMember figcaption {
+    text-align: center;
+    font-family: pantonBlack;
+    font-size: 1.125rem;
+    color: #FFFFFF;
+    line-height: 27px;
+}
+
+figure.smallMember figcaption p {
+    font-family: latoRegular;
+    font-size: 1rem;
+    color: #FFFFFF;
+    line-height: 19px;
+}
+
+    figure.smallMember a {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    figure.smallMember img {
+        display: block;
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        border-radius: 50%;
+    }
+
+figure.smallMember {
+    float: none;
+}

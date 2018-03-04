@@ -18,7 +18,7 @@
         @if ((bool)ViewData["hasPreviousPage"])
         {
             <div id="news-prev-container" style="display: inline-block; position: absolute; top: 50%; left: 2%;">
-                <a href='@Url.Action("Index", "News", new {page = ViewData["previousPage"]})'>
+                <a asp-controller="News" asp-action="Index" asp-route-page="@ViewData["previousPage"]">
                     <img src='~/images/arrow_news_left.png' />
                 </a>
             </div>
@@ -31,10 +31,7 @@
                         <img class="borderimg1" style="max-height: 100px; width: auto" src="@item.ThumbnailFileName">
                     </figure>
                     <header>
-
-                        @*<a href="@item.MoreInfoUrl">*@
-                        @*<a href="@Url.Action("Details", "News", new { ID = item.ID} )">*@
-                        <a href="@Url.Action("Details", "Article", new {ID = item.ID})">
+                        <a asp-controller="Article" asp-action="Details" asp-route-id="@item.ID">
                             <h3>@item.Title</h3>
                         </a>
                     </header>
@@ -52,7 +49,7 @@
         @if ((bool)ViewData["hasNextPage"])
         {
             <div id="news-next-container" style="display: inline-block; position: absolute; top: 50%; right: 2%;">
-                <a href='@Url.Action("Index", "News", new {page = ViewData["nextPage"]})'>
+                <a asp-controller="News" asp-action="Index" asp-route-page="@ViewData["nextPage"]">
                     <img src='~/images/arrow_news_right.png' />
                 </a>
             </div>

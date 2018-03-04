@@ -1,0 +1,51 @@
+﻿
+section.newsSection {
+    background-color: #F5F5F5;
+    margin-top: 10%;
+    padding-top: 15px;
+    padding-bottom: 35px;
+}
+
+article.news {
+    margin: auto;
+    position: relative;
+    background-image: url(../images/bg_hirek_small.png);
+    background-size: 100% 100%;
+    padding-bottom: 2%;
+}
+
+.news-row {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.news-row {
+    font-family: latoRegular;
+    font-size: 1rem;
+    color: #2F2F2F;
+    line-height: 19px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.news-row figure {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.news-row .social {
+    margin-bottom: 1em;
+}
+
+.news-row p {
+    text-align: justify;
+    height: 25%;
+    max-height: 150px;
+    overflow: hidden;
+}
+
+.articleDetails {
+    margin-top: 65px;
+}

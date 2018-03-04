@@ -1,0 +1,19 @@
+﻿
+.satDiv {
+    height: 31rem;
+    /*background-image: url(../images/placeholder_satellite.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;*/
+    position: relative;
+    left: 20%
+}
+
+.satDiv img {
+    width: 100%;
+}
+
+.satArticle header {
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+}

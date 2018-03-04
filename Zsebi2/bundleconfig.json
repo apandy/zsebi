@@ -9,11 +9,38 @@
     ]
   },
   {
+    "outputFileName": "wwwroot/css/zsebi.min.css",
+    // An array of relative input file paths. Globbing patterns supported
+    "inputFiles": [
+      "wwwroot/css/zsebi.css",
+      "wwwroot/css/panel-zsebi.css",
+      "wwwroot/css/amateur.css",
+      "wwwroot/css/contact-menu.css",
+      "wwwroot/css/main-menu.css",
+      "wwwroot/css/news.css",
+      "wwwroot/css/satelite-menu.css",
+      "wwwroot/css/sponsors.css",
+      "wwwroot/css/team.css",
+      "wwwroot/css/technical-info.css"
+    ]
+  },
+  {
     "outputFileName": "wwwroot/js/site.min.js",
     "inputFiles": [
       "wwwroot/js/site.js"
     ],
-    // Optionally specify minification options
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    // Optionally generate .map file
+    "sourceMap": false
+  },
+  {
+    "outputFileName": "wwwroot/js/zsebi.min.js",
+    "inputFiles": [
+      "wwwroot/js/zsebi.js"
+    ],
     "minify": {
       "enabled": true,
       "renameLocals": true
