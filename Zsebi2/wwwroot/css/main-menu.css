@@ -1,3 +1,20 @@
 ﻿nav.bar {
     z-index: 1000;
 }
+
+.menuSection .social-btn {
+    position: absolute;
+    top: 8px;
+}
+
+    .menuSection .social-btn img {
+        width: 2.4em;
+    }
+
+    .menuSection .social-btn.facebook {
+        left: 70%;
+    }
+
+    .menuSection .social-btn.twitter {
+        left: 84%;
+    }
