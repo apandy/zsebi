@@ -11,9 +11,62 @@
         <img src="~/images/article_image_container_expanded.png">
     </figure>
     <header>
-        <h3>BBBBBBB BBBBBBBBB BBBBBB BBBBBB</h3>
+        <h3>Műhold vázszerkezet</h3>
     </header>
-    <p>
-        bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb bbbbbbb
-    </p>
+		<p>
+            Az űreszközzel való kommunikáció és a mérési adatok feldolgozása, lehozása természetesen a legfontosabb feladat a SMOG-1 élete során, azonban a kifogástalan működéshez szükséges egy megfelelő vázszerkezet, ami befoglalja az elektronikai rendszereket.
+        </p>
+        <img src="~/images/satellite/engineering/smog1.png">
+        <p>
+			Bár a kisműholdak téglatestszerű szerkezete adott, számos kihívást kell megoldani a hordozórakétába szerelés előtt. A legnagyobb terhelés a SMOG-1 műholdat indításnál fogja érni, amikor is 10 G-t meghaladó gyorsulást is probléma nélkül el kell viselnie a szerkezetnek. A hordozórakéta üzeme többnyire egyenletes, azonban az első fokozat leválásakor a rakományt egy ütésszerű terhelés éri, ami megközelíti a 100 G-t.
+		</p>
+		<p>
+			A külső szerkezet stabilitása elsősorban a napelemek szempontjából kritikus, ugyanis ezek sérülése esetén nem leszünk képesek pótolni az elhasznált energiát.
+		</p>
+		<p>
+			A belső áramköri lemezek közül az akkumulátort tartalmazó lapot éri a legnagyobb terhelés, mivel ennek az alkatrésznek van a legnagyobb tömege. Esetünkben az 5x5x5 cm-es befoglaló mérethez bár 250 g tömeghatár tartozik, a méretkorlát jelenti a legnagyobb kihívást. Így a SMOG-1 esetében a nyomtatott áramköri lemezek viselik egyben a mechanikai terheléseket is, tehát a MaSat-1-nél és általánosságban a CubeSat-oknál, illetve nagyobb műholdaknál használ alumínium vázszerkezet egyszerűen nem fért bele a kockába. A belső lapok számát a buszcsatlakozó magassága és az áramköri elemek együtt határozták meg. Így két panel között a távolság mindössze 4,5 mm, az akkumulátor esetében 9 mm.
+		</p>
+		<p>
+			A rezonanciához köthető problémák elkerülése érdekében a teljes szerkezetet merevre terveztük. A struktúra összefogásáról két menetes szár gondoskodik. Az oldható kötés a tesztelések és az utólagos módosítások során válik kritikussá, mivel ekkor a műholdat többször szét kell szedni és össze kell tudni szerelni hibátlanul.
+		</p>
+		<p>
+			A belső panelek egyedi alakja járul hozzá a merev belső rögzítéshez. Az oldallemezek belső felén kapnak helyet elsősorban a napelemekhez tartozó áramkörök komponensei.
+		</p>
+		 <header>
+            <h3>Műhold hőtechnika</h3>
+        </header>
+        <p>
+			A műhold hermetikus szigetelést nem tartalmaz, aminek főként biztonságtechnikai okai vannak. Azonban ez a tudatos választás a szerkezet termikus egyensúlyában is fontos szerepet játszik, mivel a konvekciós hőterjedés így gátolt, a környezeti levegő ki fog szökni belőle a felbocsátás során. Tehát a világűrben a hő csak vezetés és sugárzás útján képes terjedni a műholdban.
+		</p>
+		<p>
+			A SMOG-1 termikus egyensúlya kritikus az élettartam szempontjából, mivel az alkalmazott áramköri alkatrészek -40 és +80 °C közt üzemképesek. Ettől egy szigorúbb feltételt jelent az akkumulátor, aminek a stabil üzeme -10 és +60 °C közt biztosított, azonban tölteni csak 0 és +45 °C közt lehetséges. Bár az akkumulátor az említett tartományokon kívüli üzeme nem ütésszerűen roncsolja a szerkezetet, tartós előírtakon kívüli használat mellett gyorsan csökken a kapacitása és így az élettartama.
+		</p>
+		<p>
+			Az említett hőmérsékleti kritériumok Földi körülmények közt könnyen teljesíthetőek, azonban a világűr -270 °C-os átlaghőmérséklete mellett ezek betartása mérnöki feladat. Hőforrásként a Nap sugárzása áll rendelkezésünkre, azonban ez egyrészt csak a teljes pálya 64%-án áll rendelkezésre, másrészt energiatermelés céljára a napelemek a bejövő sugárzás 27%-át alakítják át elektromos árammá.
+		</p>
+		<p>
+			A kis méretből következő kis tömeg kis összes hőkapacitást jelent, tehát Földárnyékban igen gyorsan lehűl a kocka. Ha helyzeten javít az a tény, hogy a tervezett 550 km-es pályamagasságról a Föld a műhold által látott tér 1/3-ában jelen van, tehát itt nem a -270 °C-os világűrrel, hanem a 15 °C átlaghőmérsékletű Földfelszínnel van hősugárzásos kapcsolatban.
+		</p>
+		<p>
+			Az akkumulátor megóvása érdekében azt többrétegű hőszigetelő anyaggal vontuk be, majd a csomagot egy réz kupakkal rögzítettük a megfelelő áramköri panel egyik oldalára. Így hősugárzás szempontjából bár jó izoláció érhető el, a legtöbb hő a bekötő vezetékeken keresztül közlekedik, így a termikus elszigetelésnek van egy felső határa.
+		</p>
+		<p>
+			A műhold pályája bár jól becsülhető, a térbeli mozgása már kevéssé. Mivel súlytalanságban már a milli newton nagyságrendű erőhatás is jelentős, ezért a kibocsátás során biztosan rendelkezni fog a SMOG-1 egy kezdeti szögsebességgel, tehát térbeli forgást fog végezni. Ez biztosítja azt, hogy minden oldalt érjen napsugárzás, így extrém hőmérsékletek nem alakulnak ki, tehát olyan oldal nem lesz, ami csak a világűr sötétjét látja.
+		</p>
+		<p>
+			Az akkumulátort és az oldalakat végeselemes (FEM) és hőáram hálózatos (TN) módszerekkel egyaránt vizsgáltuk. Az eredmények tükrében az alkalmazott szerkezeti kialakítás becsléseink szerint meg fog felelni az elektronikai alkatrészek által támasztott követelményeknek. A műhold forgása az egyes ábrákon a nagy időlépték miatt nem látható, azonban a napsütéses/árnyékos oldal okozta fluktuáció nyomon követhető. Tehát termikus szempontból állandósult állapotot sosem fog a műhold elérni, az élettartam során tapasztalt ingadozás viszont néhány kör megtétele után állandó értéket vesz fel.
+		</p>
+		<p>
+			Az akkumulátor becsült hőmérséklete:
+			<br>
+			<img src="~/images/satellite/engineering/akku_temp.png">
+		</p>
+		<p>
+			Egy oldallemez becsült hőmérséklete:
+			<br>
+			<img src="~/images/satellite/engineering/sidepanel_temp.png">
+		</p>
+		<p>
+			A hőáram hálózatos módszer egy pesszimista becslés a kevés csomópont miatt, míg a végeselemes eredmények valósabb képet adnak a termikus üzemállapotról. Amennyiben egy megvilágított napelemoldalról nem veszünk le elektromos teljesítményt, mert az akkumulátor teljesen fel van töltve és az üzem sem igényel többet, vagy esetleg megsérült, a beérkező napfény nagyobb hányada fordítódik a műhold melegítésére, így az üzemi hőmérséklet növekedni fog.
+		</p>
 </section>
