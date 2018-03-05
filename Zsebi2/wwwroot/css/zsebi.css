@@ -83,7 +83,7 @@ body {
 h2 {
     /*pantonBlack font style is a bit blurry compared to the video ??? FIXED: font-weight: 300;*/
     font-family: pantonBlack;
-    font-size: 1.5625rem;
+    font-size: 1.5625em;
     font-weight: 300;
     color: #2F2F2F;
     line-height: 2.5em;
@@ -670,4 +670,8 @@ article.popup {
     -webkit-border-image: url(../images/article_image_container.png) 15; /* Safari 3.1-5 */
     -o-border-image: url(../images/article_image_container.png) 15; /* Opera 11-12.1 */
     border-image: url(../images/article_image_container.png) 15;
+}
+
+.full-page-content {
+    margin-top: 65px;
 }

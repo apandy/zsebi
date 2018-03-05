@@ -1,0 +1,27 @@
+﻿.modal-content-zsebi {
+    background-color: initial;
+    background-image: url(/images/bg_kapcsolat.png);
+    background-size: 100% 100%;
+}
+
+    .modal-content-zsebi .modal-header {
+        border-bottom: initial;
+    }
+
+        .modal-content-zsebi .modal-header .modal-title {
+            margin-left: 30px;
+        }
+
+        .modal-content-zsebi .modal-header button {
+            padding-top: 14px;
+            padding-right: 15px;
+            font-size: 2em;
+        }
+
+    .modal-content-zsebi .modal-body p {
+        font-family: latoRegular;
+        font-size: 1rem;
+        color: #2f2f2f;
+        line-height: 19px;
+        text-align: justify;
+    }

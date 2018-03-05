@@ -46,10 +46,6 @@ article.news {
     overflow: hidden;
 }
 
-.articleDetails {
-    margin-top: 65px;
-}
-
 .news .glyphicon {
     font-size: 2em;
     color: #333;

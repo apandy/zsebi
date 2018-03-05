@@ -15,26 +15,22 @@
     }
 
     function attachPopups() {
+        $('.modal').modal({
+            show: false
+        });
         $('a.popup').on('click', function (e) {
             e.preventDefault();
-            var id = 'link-' + ($(this).index() + 1);
-            $('<div/>', { 'class': 'myDlgClass', 'id': id, 'width': '30%' })
-                .load($(this).attr('href'), function () {
-                    $('a.closeButton').on('click', function (e) {
-                        e.preventDefault();
-                        $(this).closest(".myDlgClass").dialog('close');
-                    });
-                })
-                .appendTo('body')
-                .dialog()
-                .position({
-                    my: "center top",
-                    at: "center top",
-                    of: window
-                });
+            openModal($(this).attr('href'));
+            
         });
     }
-    
+
+    function openModal(link) {
+        $('.modal .modal-content')
+            .load(link, function () {
+                $('.modal').modal('show');
+            });
+    }
     $(function() {
         attachAjaxCalls();
         attachPopups();
