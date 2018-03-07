@@ -15,21 +15,13 @@
             <h3>Fedélzeti számítógép (OBC)</h3>
         </header>
         <p>
-            
+            A SMOG-1 fedélzeti számítógép (on-board computer, OBC) kapcsolódik a műhold összes többi alrendszeréhez és ezek működését vezérli, monitorozza és összehangolja.
         </p>
+        <img src="~/images/satellite/OBC/P9290229.JPG">
         <p>
-			
+			Hardveres szempontból a fedélzeti számítógép összetevői: egy ARM Cortex-M mikrokontroller, RTCC (óra és naptár), flash memória, és a szenzorok, amelyek a műhold „érzékszervei”. Az OBC-hez kapcsolódik a többi alrendszer is: a kommunikációs rendszer (COM), valamint az energiaellátó rendszerek, amelyektől telemetriát gyűjt. A nagy megbízhatóság érdekében mindegyik egységből kettő lesz a fedélzeten, amelyek hideg redundanciával, egy-pont meghibásodásra méretezetten működnek.
 		</p>
 		<p>
-			
-		</p>
-		<p>
-			
-		</p>
-		<p>
-			
-		</p>
-		<p>
-			
+			Az OBC szoftverének feladata, hogy vezérelje a műhold működését, a méréseket ütemezze, telemetriát gyűjtsön, valamint irányítsa a kommunikációt a földi állomással, amely egy 4.5 m-es parabola antennával fogja venni a SMOG-1 jeleit a BME „E” épület tetején. A szoftver „event loop” felépítéssel valós időben fut.
 		</p>
 </section>
