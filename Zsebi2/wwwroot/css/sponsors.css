@@ -1,5 +1,5 @@
 ﻿
-section.sponsorSection {
+/*section.sponsorSection {
     background-color: #F5F5F5;
 }
 
@@ -17,4 +17,15 @@ article.sponsor {
     border-width: 0 2px 2px 0;
     border-style: solid;
     border-color: #D7D7D7;
+}*/
+
+.sponsorSection {
+    background-color: #F5F5F5;
+}
+
+    .sponsorSection .sponsorname, .sponsorSection .sponsortext {
+        display: none;
+    }
+
+.sponsorSection figure {
 }
