@@ -1,25 +1,4 @@
-﻿
-/*section.sponsorSection {
-    background-color: #F5F5F5;
-}
-
-article.sponsor {
-    margin: auto;
-    padding-bottom: 40px;
-}
-
-.sponsor figure {
-    width: 16%;
-    display: inline-block;
-    padding: 1% 2% 1% 2%;
-    margin: 0;
-    text-align: center;
-    border-width: 0 2px 2px 0;
-    border-style: solid;
-    border-color: #D7D7D7;
-}*/
-
-.sponsorSection {
+﻿.sponsorSection {
     background-color: #F5F5F5;
 }
 
@@ -27,5 +6,9 @@ article.sponsor {
         display: none;
     }
 
-.sponsorSection figure {
-}
+    .sponsorSection figure img, .sponsorSection figure h2 {
+        border-width: 0 2px 2px 0;
+        border-style: solid;
+        border-color: #D7D7D7;
+        opacity: 0.6;
+    }
