@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "TESZTELÉS";
+}
+
+<section class="container full-page-content technical-info">
+    <article class="panel panel-zsebi">
+        <header class="clearfix panel-heading">
+            <h3 class="pull-left panel-title">
+                MŰSZAKI INFORMÁCIÓK <span class="glyphicon glyphicon-triangle-right"></span> TESZTELÉS
+            </h3>
+            <a class="pull-right back" asp-controller="Home" asp-action="Index" asp-fragment="satelite">VISSZA</a>
+        </header>
+        <div class="panel-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 button">
+                        <a class="popup" asp-action="ThermalCamera">Hőkamra</a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 button">
+                        <a class="popup" asp-action="ThermalVacuumChamber">Termo-vákuum kamra</a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 button">
+                        <a class="popup" asp-action="Shaker">Rázógép</a>
+                    </div>
+                    <div class="col-md-3 col-sm-4 button">
+                        <a class="popup" asp-action="BalloonFlight">Ballonos repülés</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <figure class="col-xs-push-1 col-xs-10">
+                        <img src="~/images/dots_muhold.png" />
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
