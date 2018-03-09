@@ -44,9 +44,10 @@
         <div class="form-group">
             <label asp-for="Excerpt" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <textarea asp-for="Excerpt" style="height:100px;width:700px"></textarea>
+                <textarea asp-for="Excerpt" class="form-control" rows="4"></textarea>
                 @*<input asp-for="Excerpt" class="form-control" />*@
                 <span asp-validation-for="Excerpt" class="text-danger"></span>
+                <span class="help-block"><span data-ch-count-for="#Excerpt">200</span> characters left.</span>
             </div>
         </div>
         <div class="form-group">
