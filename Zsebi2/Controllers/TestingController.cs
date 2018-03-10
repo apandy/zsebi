@@ -12,22 +12,22 @@ namespace Zsebi2.Controllers
 
         public IActionResult ThermalCamera()
         {
-            return View("_ThermalCamera");
+            return PartialView("_ThermalCamera");
         }
 
         public IActionResult ThermalVacuumChamber()
         {
-            return View("_ThermalVacuumChamber");
+            return PartialView("_ThermalVacuumChamber");
         }
 
         public IActionResult Shaker()
         {
-            return View("_Shaker");
+            return PartialView("_Shaker");
         }
 
         public IActionResult BalloonFlight()
         {
-            return View("_BalloonFlight");
+            return PartialView("_BalloonFlight");
         }
     }
 }
