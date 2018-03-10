@@ -127,7 +127,10 @@ namespace Zsebi2.Controllers
         // GET: Admin/Create
         public IActionResult Create()
         {
-            return View();
+            return View("Edit", new Article
+            {
+                PublishDate = DateTime.Today
+            });
         }
 
         // POST: Admin/Create
@@ -143,7 +146,7 @@ namespace Zsebi2.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            return View(article);
+            return View("Edit", article);
         }
 
         // GET: Admin/Edit/5
