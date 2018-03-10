@@ -18,8 +18,29 @@
         });
     }
 
+    function initAutoGenerateUrl() {
+        $("#generate-url").each(function() {
+            var $autoGenerateUrl = $(this);
+            var $title = $("#Title");
+            var $url = $("#Url");
+
+            function createUrl() {
+                if ($autoGenerateUrl.prop('checked')) {
+                    var title = $title.val() || "";
+                    var url = convertToUrl(title);
+                    $url.val(url);
+                }
+            }
+
+            $title.on("keyup", createUrl);
+            $title.on("change", createUrl);
+            $autoGenerateUrl.on("change", createUrl);
+        });
+    }
+
     $(function () {
         initCharacterCounter();
+        initAutoGenerateUrl();
     });
 
 })();

@@ -24,6 +24,16 @@
             </div>
         </div>
         <div class="form-group">
+            <label asp-for="Url" class="col-md-2 control-label"></label>
+            <div class="col-md-7">
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="col-md-3">
+                <input type="checkbox" id="generate-url" />Auto generated
+            </div>
+        </div>
+        <div class="form-group">
             <label asp-for="PublishDate" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="PublishDate" class="form-control" />

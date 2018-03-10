@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Zsebi2.DataLayer
@@ -7,6 +8,9 @@ namespace Zsebi2.DataLayer
     public class Article
 	{
 		public int ID { get; set; }
+        
+        [MaxLength(50)]
+        public string Url { get; set; }
 
 		public string Title { get; set; }
 
