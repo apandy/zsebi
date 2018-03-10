@@ -235,7 +235,7 @@ namespace Zsebi2.Controllers
         }
 
 
-        private string LocalUpladedFolderPath => Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\images\\uploaded\\");
+        private string LocalUpladedFolderPath => Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "uploaded");
 
 
         private string webBasePath = "/images/uploaded/";
@@ -244,14 +244,18 @@ namespace Zsebi2.Controllers
         // GET: Admin/CKEditorFileBrowse
         public IActionResult CKEditorFileBrowse(string type)
         {
-            var images = Directory.EnumerateFiles(LocalUpladedFolderPath).Where(i => i.EndsWith("png") || i.EndsWith("jpg")).Select(i => Path.GetFileName(i));
+            var images = Directory.EnumerateFiles(LocalUpladedFolderPath)
+                .Where(i => i.EndsWith("png") || i.EndsWith("jpg"))
+                .Select(Path.GetFileName);
 
             return View(images);
         }
 
         public IActionResult FileBrowse(string type)
         {
-            var images = Directory.EnumerateFiles(LocalUpladedFolderPath).Where(i => i.EndsWith("png") || i.EndsWith("jpg")).Select(i => Path.GetFileName(i));
+            var images = Directory.EnumerateFiles(LocalUpladedFolderPath)
+                .Where(i => i.EndsWith("png") || i.EndsWith("jpg"))
+                .Select(Path.GetFileName);
 
             return View(images);
         }
