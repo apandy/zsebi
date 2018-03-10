@@ -1,5 +1,4 @@
-﻿@using Zsebi2.DataLayer
-@model Zsebi2.DataLayer.Article
+﻿@model ArticleModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -29,8 +28,8 @@
                 <input asp-for="Url" class="form-control" />
                 <span asp-validation-for="Url" class="text-danger"></span>
             </div>
-            <div class="col-md-3">
-                <input type="checkbox" id="generate-url" />Auto generated
+            <div class="col-md-3 checkbox">
+                <input type="checkbox" asp-for="GenerateUrl" />Auto generated
             </div>
         </div>
         <div class="form-group">

@@ -8,11 +8,20 @@ namespace Zsebi2.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AlterColumn<string>(
+                name: "Title",
+                table: "Articles",
+                type: "varchar(100)",
+                maxLength: 100,
+                nullable: true,
+                oldClrType: typeof(string),
+                oldNullable: true);
+
             migrationBuilder.AddColumn<string>(
                 name: "Url",
                 table: "Articles",
-                type: "varchar(50)",
-                maxLength: 50,
+                type: "varchar(100)",
+                maxLength: 100,
                 nullable: true);
         }
 
@@ -21,6 +30,15 @@ namespace Zsebi2.Migrations
             migrationBuilder.DropColumn(
                 name: "Url",
                 table: "Articles");
+
+            migrationBuilder.AlterColumn<string>(
+                name: "Title",
+                table: "Articles",
+                nullable: true,
+                oldClrType: typeof(string),
+                oldType: "varchar(100)",
+                oldMaxLength: 100,
+                oldNullable: true);
         }
     }
 }

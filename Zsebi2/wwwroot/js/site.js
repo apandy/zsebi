@@ -19,7 +19,7 @@
     }
 
     function initAutoGenerateUrl() {
-        $("#generate-url").each(function() {
+        $("#GenerateUrl").each(function() {
             var $autoGenerateUrl = $(this);
             var $title = $("#Title");
             var $url = $("#Url");

@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Zsebi2.DataLayer;
 using Zsebi2.Models;
 using Zsebi2.Services;
 
@@ -18,20 +16,21 @@ namespace Zsebi2.Controllers
     [Authorize]
     public class AdminController : Controller
     {
-        private readonly SiteContext _context;
         private readonly IUserServices _userServices;
+        private readonly IArticleService _articleService;
 
-        public AdminController(SiteContext context, IUserServices userServices)
+        public AdminController(IUserServices userServices, IArticleService articleService)
         {
-            _context = context;
             _userServices = userServices;
+            _articleService = articleService;
         }
 
         // GET: Admin
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1, int size = 50)
         {
             //MigrateDb();
-            return View(await _context.Articles.OrderByDescending(a => a.PublishDate).ToListAsync());
+            var articles = await _articleService.GetArticlesByDateDescending(page, size);
+            return View(articles);
         }
 
         [HttpGet]
@@ -114,8 +113,7 @@ namespace Zsebi2.Controllers
                 return NotFound();
             }
 
-            var post = await _context.Articles
-                .SingleOrDefaultAsync(m => m.ID == id);
+            var post = await _articleService.GetArticleById(id.Value);
             if (post == null)
             {
                 return NotFound();
@@ -127,9 +125,11 @@ namespace Zsebi2.Controllers
         // GET: Admin/Create
         public IActionResult Create()
         {
-            return View("Edit", new Article
+            ViewBag.GenerateUrl = true;
+            return View("Edit", new ArticleModel
             {
-                PublishDate = DateTime.Today
+                PublishDate = DateTime.Today,
+                GenerateUrl = true
             });
         }
 
@@ -138,12 +138,11 @@ namespace Zsebi2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Title,HtmlBody,PublishDate,ThumbnailFileName,Excerpt")] Article article)
+        public async Task<IActionResult> Create(ArticleModel article)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(article);
-                await _context.SaveChangesAsync();
+                await _articleService.SaveArticle(article);
                 return RedirectToAction("Index");
             }
             return View("Edit", article);
@@ -157,11 +156,13 @@ namespace Zsebi2.Controllers
                 return NotFound();
             }
 
-            var post = await _context.Articles.SingleOrDefaultAsync(m => m.ID == id);
+            var post = await _articleService.GetArticleById(id.Value);
             if (post == null)
             {
                 return NotFound();
             }
+
+            ViewBag.GenerateUrl = false;
             return View(post);
         }
 
@@ -170,7 +171,7 @@ namespace Zsebi2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,HtmlBody,PublishDate,ThumbnailFileName,Excerpt")] Article article)
+        public async Task<IActionResult> Edit(int id, ArticleModel article)
         {
             if (id != article.ID)
             {
@@ -179,22 +180,7 @@ namespace Zsebi2.Controllers
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(article);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ArticleExists(article.ID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                await _articleService.SaveArticle(article);
                 return RedirectToAction("Index");
             }
             return View(article);
@@ -208,8 +194,7 @@ namespace Zsebi2.Controllers
                 return NotFound();
             }
 
-            var post = await _context.Articles
-                .SingleOrDefaultAsync(m => m.ID == id);
+            var post = await _articleService.GetArticleById(id.Value);
             if (post == null)
             {
                 return NotFound();
@@ -223,18 +208,8 @@ namespace Zsebi2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var post = await _context.Articles.SingleOrDefaultAsync(m => m.ID == id);
-            _context.Articles.Remove(post);
-            await _context.SaveChangesAsync();
+            await _articleService.DeleteArticleById(id);
             return RedirectToAction("Index");
-        }
-
-
-
-
-        private bool ArticleExists(int id)
-        {
-            return _context.Articles.Any(e => e.ID == id);
         }
 
 

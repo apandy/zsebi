@@ -36,10 +36,11 @@ namespace Zsebi2.Migrations
                     b.Property<string>("ThumbnailFileName")
                         .HasColumnName("ThumbnailfileName");
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .HasMaxLength(100);
 
                     b.Property<string>("Url")
-                        .HasMaxLength(50);
+                        .HasMaxLength(100);
 
                     b.HasKey("ID");
 

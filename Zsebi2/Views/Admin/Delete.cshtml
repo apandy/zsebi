@@ -1,5 +1,4 @@
-@using Zsebi2.DataLayer
-@model Zsebi2.DataLayer.Article
+@model ArticleModel
 
 @{
     ViewData["Title"] = "Delete";
@@ -14,7 +13,6 @@
     <h4>Post</h4>
     <hr />
     <dl class="dl-horizontal">
-        <input type="hidden" asp-for="ID" />
         <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -48,9 +46,8 @@
     </dl>
 
     <form asp-action="Delete">
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            <a asp-action="Index">Back to List</a>
-        </div>
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
     </form>
 </div>

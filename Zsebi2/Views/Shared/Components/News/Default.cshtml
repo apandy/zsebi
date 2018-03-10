@@ -32,7 +32,7 @@
                         <img class="borderimg1" style="max-height: 100px; width: auto" src="@item.ThumbnailFileName">
                     </figure>
                     <header>
-                        <a asp-controller="Article" asp-action="Details" asp-route-id="@item.ID">
+                        <a asp-controller="Article" asp-action="Details" asp-route-id="@item.GetUrl()">
                             <h3>@item.Title</h3>
                         </a>
                     </header>

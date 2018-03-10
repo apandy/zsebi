@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Zsebi2.DataLayer;
 using Zsebi2.Models;
@@ -19,12 +20,20 @@ namespace Zsebi2.Controllers
             return View();
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
             var articles = ctx.Articles.OrderBy(p => p.PublishDate).ToList();
 
-            var post = articles.SingleOrDefault(p => p.ID == id);
-
+            Article post;
+            if (Int32.TryParse(id, out var numericId))
+            {
+                post = articles.FirstOrDefault(p => p.ID == numericId);
+            }
+            else
+            {
+                post = articles.FirstOrDefault(p => p.Url == id);
+            }
+            
             return View(post ?? new Article());
         }
     }

@@ -8,11 +8,12 @@ namespace Zsebi2.DataLayer
     public class Article
 	{
 		public int ID { get; set; }
-        
-        [MaxLength(50)]
+
+	    [MaxLength(100)]
         public string Url { get; set; }
 
-		public string Title { get; set; }
+	    [MaxLength(100)]
+        public string Title { get; set; }
 
 		public string HtmlBody { get; set; }
 
@@ -24,5 +25,10 @@ namespace Zsebi2.DataLayer
 		public string Excerpt { get; set; }
 
 		public string MoreInfoUrl { get; set; }
+
+	    public string GetUrl()
+	    {
+	        return string.IsNullOrWhiteSpace(Url) ? ID.ToString() : Url;
+	    }
 	}
 }
