@@ -14,6 +14,12 @@ article.news {
     padding-bottom: 2%;
 }
 
+@media (max-width: 767px) {
+    article.news {
+         margin: 10px;
+    }
+}
+
 .news-row {
     margin: 0 auto;
     width: 90%;

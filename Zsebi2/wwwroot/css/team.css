@@ -1,22 +1,24 @@
-﻿
+﻿.team header .img-smog {
+    width: 20%;
+}
+.team header .img-dots {
+    width: 73%;
+    position: relative;
+    left: 5%;
+}
+
 /* 2 options given by designer for background image, a png and the given css (???) */
 section.teamSection {
     /*background-image: url(bg_csapat.png); */
     background-image: radial-gradient(69% 94%, #00E1CB 0%, rgba(0,0,0,0.81) 95%);
-    margin: 0;
     padding-bottom: 1.5%;
 }
 
 article.team {
-    margin: auto;
     padding-top: 2%;
 }
 
 figure.smallMember {
-    display: inline-block;
-    margin: 1% 1.8% 0 1.8%;
-    /*height:330px;*/
-    /*float:left;*/
 }
 
 figure.smallMember figcaption {
@@ -52,10 +54,6 @@ figure.smallMember figcaption p {
         -o-border-radius: 50%;
         border-radius: 50%;
     }
-
-figure.smallMember {
-    float: none;
-}
 
 .past-team-header {
     font-size: 2rem;

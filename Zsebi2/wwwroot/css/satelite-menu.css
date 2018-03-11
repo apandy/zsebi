@@ -1,12 +1,5 @@
-﻿
-.satDiv {
-    height: 31rem;
-    /*background-image: url(../images/placeholder_satellite.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;*/
-    position: relative;
-    left: 20%
+﻿.satSection {
+    margin-top: 50px;
 }
 
 .satDiv img {

@@ -2,61 +2,54 @@
 @model IEnumerable<Zsebi2.DataLayer.Article>
 
 <div id="news" class="anchor"></div>
-<section class="newsSection">
+<article class="news col-sm-push-1 col-sm-10 col-lg-push-2 col-lg-8">
     <header>
-        <h1 hidden>
-            News Secton
-        </h1>
+        <h2 style="position: relative; left: 7%; width: 90%;">
+            HÍREK
+        </h2>
     </header>
-    <article class="news col-m-100 col-p-60">
-        <header>
-            <h2 style="position: relative; left: 7%; width: 90%;">
-                HÍREK
-            </h2>
-        </header>
 
-        @if ((bool)ViewData["hasPreviousPage"])
-        {
-            <div id="news-prev-container" style="display: inline-block; position: absolute; top: 50%; left: 2%;">
-                <a asp-controller="News" asp-action="Index" asp-route-page="@ViewData["previousPage"]">
-                    <span class="glyphicon glyphicon-triangle-left"></span>
-                    @*<img src='~/images/arrow_news_left.png' />*@
-                </a>
-            </div>
-        }
-        <div class="row news-row">
-            @foreach (var item in Model)
-            {
-                <div class="col-md-4 col-sm-12" id="news-@(item.ID)">
-                    <figure>
-                        <img class="borderimg1" style="max-height: 100px; width: auto" src="@item.ThumbnailFileName">
-                    </figure>
-                    <header>
-                        <a asp-controller="Article" asp-action="Details" asp-route-id="@item.GetUrl()">
-                            <h3>@item.Title</h3>
-                        </a>
-                    </header>
-                    <p>
-                        @Html.Raw(item.Excerpt)
-                    </p>
-                    <div class="col-xs-12 social">
-                        <a href="http://www.facebook.com"><img src="~/images/icon_facebook.png"></a>
-                        <a href="http://www.twitter.com"><img src="~/images/icon_twitter.png"></a>
-                        <a href="http://www.plus.google.com"><img src="~/images/icon_googleplus.png"></a>
-                    </div>
-                </div>
-            }
+    @if ((bool)ViewData["hasPreviousPage"])
+    {
+        <div id="news-prev-container" style="display: inline-block; position: absolute; top: 50%; left: 2%;">
+            <a asp-controller="News" asp-action="Index" asp-route-page="@ViewData["previousPage"]">
+                <span class="glyphicon glyphicon-triangle-left"></span>
+                @*<img src='~/images/arrow_news_left.png' />*@
+            </a>
         </div>
-        @if ((bool)ViewData["hasNextPage"])
+    }
+    <div class="row news-row">
+        @foreach (var item in Model)
         {
-            <div id="news-next-container" style="display: inline-block; position: absolute; top: 50%; right: 2%;">
-                <a asp-controller="News" asp-action="Index" asp-route-page="@ViewData["nextPage"]">
-                    <span class="glyphicon glyphicon-triangle-right"></span>
-                    @*<img src='~/images/arrow_news_right.png' />*@
-                </a>
+            <div class="col-md-4 col-sm-12" id="news-@(item.ID)">
+                <figure>
+                    <img class="borderimg1" style="max-height: 100px; width: auto" src="@item.ThumbnailFileName">
+                </figure>
+                <header>
+                    <a asp-controller="Article" asp-action="Details" asp-route-id="@item.GetUrl()">
+                        <h3>@item.Title</h3>
+                    </a>
+                </header>
+                <p>
+                    @Html.Raw(item.Excerpt)
+                </p>
+                <div class="col-xs-12 social">
+                    <a href="http://www.facebook.com"><img src="~/images/icon_facebook.png"></a>
+                    <a href="http://www.twitter.com"><img src="~/images/icon_twitter.png"></a>
+                    <a href="http://www.plus.google.com"><img src="~/images/icon_googleplus.png"></a>
+                </div>
             </div>
         }
-    </article>
-</section>
+    </div>
+    @if ((bool)ViewData["hasNextPage"])
+    {
+        <div id="news-next-container" style="display: inline-block; position: absolute; top: 50%; right: 2%;">
+            <a asp-controller="News" asp-action="Index" asp-route-page="@ViewData["nextPage"]">
+                <span class="glyphicon glyphicon-triangle-right"></span>
+                @*<img src='~/images/arrow_news_right.png' />*@
+            </a>
+        </div>
+    }
+</article>
 
 

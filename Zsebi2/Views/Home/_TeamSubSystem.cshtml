@@ -2,26 +2,47 @@
 
 @foreach (var subsystem in Model)
 {
-    <h2 class="team-header">
+    <h2 class="row narrow">
         @subsystem.SystemName
         @if (!String.IsNullOrEmpty(subsystem.Name))
         {
             <span class="glyphicon glyphicon-triangle-right"></span>
-            
+
 
             @subsystem.Name
         }
     </h2>
-
-    foreach (var member in subsystem.Members)
-    {
-        <figure class="smallMember col-m-25 col-p-13">
-            <img class="rounded" src="@member.Image">
-            <figcaption>
-                @member.Name
-                <p>@member.Post</p>
-            </figcaption>
-        </figure>
-    }
+    <div class="row narrow">
+        @for (var index = 0; index < subsystem.Members.Count; index++)
+        {
+            var member = subsystem.Members[index];
+            if (index > 0)
+            {
+                if (index % 6 == 0)
+                {
+                    <div class="clearfix visible-lg-block"></div>
+                }
+                if (index % 4 == 0)
+                {
+                    <div class="clearfix visible-md-block"></div>
+                }
+                if (index % 3 == 0)
+                {
+                    <div class="clearfix visible-sm-block"></div>
+                }
+                if (index % 2 == 0)
+                {
+                    <div class="clearfix visible-xs-block"></div>
+                }
+            }
+            <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 smallMember">
+                <img class="rounded" src="@member.Image">
+                <figcaption>
+                    @member.Name
+                    <p>@member.Post</p>
+                </figcaption>
+            </figure>
+        }
+    </div>
 
 }

@@ -18,21 +18,28 @@
 </head>
 
 <body>
-    <nav class="bar">
-        <header hidden>
-            <h2>Navigation bar</h2>
-        </header>
-        <ul>
-            <li class="col-m-66 col-p-66" style="text-align: center; vertical-align: middle;">
-                <img src="~/images/smog_logo_white_small.png">
-            </li>
-            <li class="col-m-33 col-p-33">
-                <a id="menulink" href="/">menü</a>
-            </li>
-        </ul>
+    <nav class="navbar navbar-inverse navbar-zsebi navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img alt="Smog-1" src="~/images/smog_logo_white_small.png">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="main-menu-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/">menü</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="container-fluid body-content">
+    <div class="container-fluid full">
         @RenderBody()
     </div>
 

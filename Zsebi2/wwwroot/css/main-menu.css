@@ -1,20 +1,111 @@
-﻿nav.bar {
-    z-index: 1000;
+﻿
+section.menuSection {
+    margin: auto;
+    margin-top: 10%;
+    font-family: pantonBlack;
+    text-align: center;
+    font-size: 1rem;
 }
 
-.menuSection .social-btn {
-    position: absolute;
-    top: 8px;
+    section.menuSection figure {
+        margin: 1em 0;
+    }
+
+    section.menuSection .quote-caption {
+        margin: 1em 0;
+    }
+
+    section.menuSection .social-btn {
+        position: relative;
+    }
+
+        section.menuSection .social-btn img {
+            width: 2.4em;
+        }
+
+@media (max-width: 767px) {
+    section.menuSection .social-btn {
+        top: -37px;
+    }
+
+        section.menuSection .social-btn.facebook {
+            left: 39%;
+        }
+
+        section.menuSection .social-btn.twitter {
+            left: 42%;
+        }
 }
 
-    .menuSection .social-btn img {
-        width: 2.4em;
+@media screen and (min-width: 768px) {
+    section.menuSection .social-btn {
+        top: -48px;
     }
 
-    .menuSection .social-btn.facebook {
-        left: 70%;
+        section.menuSection .social-btn.facebook {
+            left: 30%;
+        }
+
+        section.menuSection .social-btn.twitter {
+            left: 35%;
+        }
+
+    .menu-image {
+        width: 66.66666667%;
+    }
+}
+
+.menu {
+    position: relative;
+    text-transform: capitalize;
+}
+
+    .menu .half {
+        float: left;
+        width: 50%
     }
 
-    .menuSection .social-btn.twitter {
-        left: 84%;
+    .menu .full {
+        float: left;
+        width: 100%
     }
+
+    .menu ol a:link, a:visited {
+        display: block;
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: #2F2F2F;
+        background-color: #FFFFFF;
+        border: 3px double #282828;
+        border-radius: 12px;
+    }
+
+    .menu ol a:hover {
+        border: 3px solid #13DEC3;
+        color: #13DEC3;
+        border-radius: 12px;
+    }
+
+    .menu ol a:active {
+        background-image: linear-gradient(-180deg, #00DBBE 0%, #04FFC0 100%);
+        border: 3px solid #282828;
+        border-radius: 12px;
+        color: #000000;
+    }
+
+    .menu div a:first-child {
+        display: block;
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: #2F2F2F;
+        background-color: #FFFFFF;
+        border: 3px double #282828;
+        border-radius: 12px;
+        line-height: 250%;
+    }
+
+        .menu div a:first-child:hover {
+            border: 3px solid #13DEC3;
+            color: #13DEC3;
+            border-radius: 12px;
+        }

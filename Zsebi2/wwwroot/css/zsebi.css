@@ -118,30 +118,23 @@ h2 {
     top: -58px;
 }
 
-.container-fluid {
-    padding-left: 0;
-    padding-right: 0;
-}
-
 /* section {
 	padding-top:30px
 } */
 /* ATTRIBUTES OF ELEMENTS DESCENDING LOCATION-WISE 
 MOBILE FIRST, so mobile attributes first */
-nav.bar {
+.navbar-zsebi {
     background-color: rgba(0,0,0,0.6);
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    width: 100%;
+    border-bottom-style: none;
 }
 
-ul {
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+    .navbar-zsebi .navbar-nav > li > a {
+        font-family: pantonBlack;
+        font-weight: 300;
+        font-size: 1.8em;
+        color: #FFFFFF;
+        line-height: 1em;
+    }
 
 article.sponsor figure img {
     width: 80%;
@@ -160,44 +153,6 @@ article.team figure p.teamtextemail {
     display: none
 }
 
-a#menulink:link, a#menulink:visited {
-    font-family: pantonBlack;
-    font-size: 1.8rem;
-    font-weight: 300;
-    line-height: 1.95em;
-    vertical-align: middle;
-    text-decoration: none;
-    color: #FFFFFF;
-}
-
-nav.bar li {
-    position: relative;
-    float: left;
-    font-family: pantonBlack;
-    font-size: 1.8rem;
-    font-weight: 300;
-    line-height: 1.95em;
-    vertical-align: middle;
-}
-
-
-section.menuSection {
-    width: 100%;
-    margin: auto;
-    margin-top: 10%;
-    font-family: pantonBlack;
-    text-align: center;
-    font-size: 1rem;
-}
-
-    section.menuSection figure {
-        margin: 1em 40px;
-    }
-
-    section.menuSection .quote-caption {
-        margin: 1em 0;
-    }
-
 ol {
     margin: 0;
     padding: 0;
@@ -206,50 +161,6 @@ ol {
     text-transform: capitalize;
 }
 
-.menu ol a:link, a:visited {
-    display: block;
-    text-decoration: none;
-    font-size: 1.25rem;
-    color: #2F2F2F;
-    background-color: #FFFFFF;
-    border: 3px double #282828;
-    border-radius: 12px;
-}
-
-.menu ol a:hover {
-    border: 3px solid #13DEC3;
-    color: #13DEC3;
-    border-radius: 12px;
-}
-
-.menu ol a:active {
-    background-image: linear-gradient(-180deg, #00DBBE 0%, #04FFC0 100%);
-    border: 3px solid #282828;
-    border-radius: 12px;
-    color: #000000;
-}
-
-.menu .button {
-    position: relative;
-    text-transform: capitalize;
-}
-
-.menu div a:first-child {
-    display: block;
-    text-decoration: none;
-    font-size: 1.25rem;
-    color: #2F2F2F;
-    background-color: #FFFFFF;
-    border: 3px double #282828;
-    border-radius: 12px;
-    line-height: 250%;
-}
-
-    .menu div a:first-child:hover {
-        border: 3px solid #13DEC3;
-        color: #13DEC3;
-        border-radius: 12px;
-    }
 /* Problem about clickability and unwanted newlines */
 figcaption {
     font-family: latoRegular;
@@ -655,14 +566,6 @@ article.popup {
     }
 }
 
-.clearfix:after {
-    content: " "; /* Older browser do not support empty content */
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both;
-}
-
 .borderimg1 {
     border: 10px solid transparent;
     padding: 0px;
@@ -674,4 +577,21 @@ article.popup {
 
 .full-page-content {
     margin-top: 65px;
+}
+
+.container-fluid.full {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 767px) {
+    .container-fluid.full > .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .row.narrow {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

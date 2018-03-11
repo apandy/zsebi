@@ -7,9 +7,9 @@
 @Html.Partial("_MainMenu")
 @Html.Partial("_SatelliteMenu")
 
-<div id="news_container">
+<section class="row newsSection" id="news_container">
     @await Component.InvokeAsync("News")
-</div>
+</section>
 
 @Html.Partial("_Team", Model.Team)
 @Html.Partial("_Sponsors")
