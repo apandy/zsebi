@@ -6,20 +6,6 @@ section.newsSection {
     padding-bottom: 35px;
 }
 
-article.news {
-    margin: auto;
-    position: relative;
-    background-image: url(../images/bg_hirek_small.png);
-    background-size: 100% 100%;
-    padding-bottom: 2%;
-}
-
-@media (max-width: 767px) {
-    article.news {
-         margin: 10px;
-    }
-}
-
 .news-row {
     margin: 0 auto;
     width: 90%;
@@ -55,4 +41,18 @@ article.news {
 .news .glyphicon {
     font-size: 2em;
     color: #333;
+}
+
+#news-prev-container {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 3%;
+}
+
+#news-next-container {
+    display: inline-block; 
+    position: absolute; 
+    top: 50%; 
+    right: 3%;
 }
