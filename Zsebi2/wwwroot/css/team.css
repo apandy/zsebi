@@ -1,11 +1,17 @@
-﻿.team header .img-smog {
-    width: 20%;
+﻿.team header {
+    padding: 8px 15px;
+    margin-bottom: 20px;
 }
-.team header .img-dots {
-    width: 73%;
-    position: relative;
-    left: 5%;
-}
+
+    .team header .img-smog {
+        width: 20%;
+    }
+
+    .team header .img-dots {
+        width: 73%;
+        position: relative;
+        left: 5%;
+    }
 
 /* 2 options given by designer for background image, a png and the given css (???) */
 section.teamSection {
@@ -21,20 +27,20 @@ article.team {
 figure.smallMember {
 }
 
-figure.smallMember figcaption {
-    text-align: center;
-    font-family: pantonBlack;
-    font-size: 1.125rem;
-    color: #FFFFFF;
-    line-height: 27px;
-}
+    figure.smallMember figcaption {
+        text-align: center;
+        font-family: pantonBlack;
+        font-size: 1.125em;
+        color: #FFFFFF;
+        line-height: 27px;
+    }
 
-figure.smallMember figcaption p {
-    font-family: latoRegular;
-    font-size: 1rem;
-    color: #FFFFFF;
-    line-height: 19px;
-}
+        figure.smallMember figcaption p {
+            font-family: latoRegular;
+            font-size: 1rem;
+            color: #FFFFFF;
+            line-height: 19px;
+        }
 
     figure.smallMember a {
         width: 100px;
@@ -48,15 +54,13 @@ figure.smallMember figcaption p {
         margin: 0 auto;
         height: auto;
         width: 100%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-        border-radius: 50%;
     }
 
 .past-team-header {
-    font-size: 2rem;
+    font-size: 2em;
+    font-family: pantonBlack;
+    color: #2F2F2F;
+    line-height: 2.5em;
 }
 
 .team-header .glyphicon {

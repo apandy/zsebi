@@ -2,17 +2,16 @@
 
 @foreach (var subsystem in Model)
 {
-    <h2 class="row narrow">
-        @subsystem.SystemName
-        @if (!String.IsNullOrEmpty(subsystem.Name))
-        {
-            <span class="glyphicon glyphicon-triangle-right"></span>
-
-
-            @subsystem.Name
-        }
-    </h2>
-    <div class="row narrow">
+    <header class="row narrow">
+        <ol class="breadcrumb breadcrumb-zsebi">
+            <li>@subsystem.SystemName</li>
+            @if (!String.IsNullOrEmpty(subsystem.Name))
+            {
+                <li>@subsystem.Name</li>
+            }
+        </ol>
+    </header>
+    <article class="row narrow">
         @for (var index = 0; index < subsystem.Members.Count; index++)
         {
             var member = subsystem.Members[index];
@@ -36,13 +35,13 @@
                 }
             }
             <figure class="col-xs-6 col-sm-4 col-md-3 col-lg-2 smallMember">
-                <img class="rounded" src="@member.Image">
+                <img class="img-circle" src="@member.Image">
                 <figcaption>
                     @member.Name
                     <p>@member.Post</p>
                 </figcaption>
             </figure>
         }
-    </div>
+    </article>
 
 }

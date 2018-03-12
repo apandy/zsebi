@@ -153,14 +153,6 @@ article.team figure p.teamtextemail {
     display: none
 }
 
-ol {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    line-height: 300%;
-    text-transform: capitalize;
-}
-
 /* Problem about clickability and unwanted newlines */
 figcaption {
     font-family: latoRegular;
