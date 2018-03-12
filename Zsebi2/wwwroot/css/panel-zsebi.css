@@ -1,9 +1,18 @@
-﻿
+﻿.zsebi-panel-wrapper {
+    background-color: #F5F5F5;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-top-left-radius: 4em;
+    border-bottom-right-radius: 4em;
+    padding: 5px;
+}
+
 .panel.panel-zsebi {
-    background-image: url(/images/bg_kapcsolat.png);
-    background-size: 100% 100%;
-    background-color: initial;
-    border: 0 none;
+    margin: 0;
+    border: 5px solid #2F2F2F;
+    border-radius: 10px;
+    border-top-left-radius: 4em;
+    border-bottom-right-radius: 4em;
 }
 
 .panel.panel-zsebi .panel-heading {

@@ -1,26 +1,38 @@
 <section class="row satSection clearfix">
     <div id="satelite" class="anchor"></div>
     <div class="col-xs-6 col-sm-push-1 col-sm-5 col-lg-push-2 col-lg-4">
-        <img class="img-responsive" src="/images/placeholder_satellite.png" alt="Szatellit"/>
+        <img class="img-responsive" src="/images/placeholder_satellite.png" alt="Szatellit" />
         <!-- satellite image container in thin technical section (weird sensation about section not being centered, despite being centered)-->
     </div>
-    <article class="col-xs-6 col-sm-push-1 col-sm-5 col-lg-push-2 col-lg-4 thin">
-        <header>
-            <h2>
-                Műszaki információk
-            </h2>
-        </header>
-        <div class="button">
-            <a asp-controller="Satellite" asp-action="Index">műhold</a>
+    <article class="col-xs-6 col-sm-push-1 col-sm-5 col-lg-push-2 col-lg-4">
+        <div class="zsebi-panel-wrapper">
+            <article class="panel panel-zsebi">
+                <header class="clearfix panel-heading">
+                    <h2>
+                        Műszaki információk
+                    </h2>
+                </header>
+                <div class="panel-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12 button">
+                                <a asp-controller="Satellite" asp-action="Index">műhold</a>
+                            </div>
+                            <div class="col-xs-12 button">
+                                <a asp-controller="Testing" asp-action="Index">tesztelés</a>
+                            </div>
+                            <div class="col-xs-12 button">
+                                <a href="http://gnd.bme.hu">földi állomás</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <figure class="col-xs-push-1 col-xs-10">
+                                <img src="~/images/dots_muszaki_infok.png">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
-        <div class="button">
-            <a asp-controller="Testing" asp-action="Index">tesztelés</a>
-        </div>
-        <div class="button">
-            <a href="http://gnd.bme.hu">földi állomás</a>
-        </div>
-        <figure>
-            <img src="~/images/dots_muszaki_infok.png">
-        </figure>
     </article>
 </section>

@@ -95,12 +95,15 @@ h2 {
 .button a:first-child {
     border: 2px solid #282828;
     border-radius: 12px;
+    line-height: 47px;
     text-decoration: none;
+    text-align: center;
     font-family: pantonBlack;
-    font-size: 0.875rem;
+    font-size: 0.875em;
     font-weight: 300;
     color: #2F2F2F;
     display: block;
+    margin-bottom: 10px;
 }
 
     .button a:first-child:hover {

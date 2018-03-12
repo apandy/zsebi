@@ -3,42 +3,44 @@
 }
 
 <section class="container full-page-content technical-info">
-    <article class="panel panel-zsebi">
-        <header class="clearfix panel-heading">
-            <ol class="pull-left breadcrumb breadcrumb-zsebi">
-                <li>MŰSZAKI INFORMÁCIÓK</li>
-                <li>MŰHOLD</li>
-            </ol>
-            <a class="pull-right back" asp-controller="Home" asp-action="Index" asp-fragment="satelite">VISSZA</a>
-        </header>
-        <div class="panel-body">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6 col-md-4 button">
-                        <a class="popup" asp-action="SatelliteEngineering">Gépészeti technológia</a>
+    <div class="zsebi-panel-wrapper">
+        <article class="panel panel-zsebi">
+            <header class="clearfix panel-heading">
+                <ol class="pull-left breadcrumb breadcrumb-zsebi">
+                    <li>MŰSZAKI INFORMÁCIÓK</li>
+                    <li>MŰHOLD</li>
+                </ol>
+                <a class="pull-right back" asp-controller="Home" asp-action="Index" asp-fragment="satelite">VISSZA</a>
+            </header>
+            <div class="panel-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 button">
+                            <a class="popup" asp-action="SatelliteEngineering">Gépészeti technológia</a>
+                        </div>
+                        <div class="col-sm-6 col-md-4 button">
+                            <a class="popup" asp-action="SatelliteEPS1">Elsődleges energiaellátás</a>
+                        </div>
+                        <div class="col-sm-6 col-md-4 button">
+                            <a class="popup" asp-action="SatelliteEPS2">Központi energiaellátó rendszer</a>
+                        </div>
+                        <div class="col-sm-6 col-md-4 button">
+                            <a class="popup" asp-action="SatelliteOBC">Fedélzeti számítógép</a>
+                        </div>
+                        <div class="col-sm-6 col-md-4 button">
+                            <a class="popup" asp-action="SatelliteTID">Doziméter</a>
+                        </div>
+                        <div class="col-sm-6 col-md-4 button">
+                            <a class="popup" asp-action="SatelliteCOM">Kommunikáció</a>
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-md-4 button">
-                        <a class="popup" asp-action="SatelliteEPS1">Elsődleges energiaellátás</a>
+                    <div class="row">
+                        <figure class="col-xs-push-1 col-xs-10">
+                            <img src="~/images/dots_muhold.png" />
+                        </figure>
                     </div>
-                    <div class="col-sm-6 col-md-4 button">
-                        <a class="popup" asp-action="SatelliteEPS2">Központi energiaellátó rendszer</a>
-                    </div>
-                    <div class="col-sm-6 col-md-4 button">
-                        <a class="popup" asp-action="SatelliteOBC">Fedélzeti számítógép</a>
-                    </div>
-                    <div class="col-sm-6 col-md-4 button">
-                        <a class="popup" asp-action="SatelliteTID">Doziméter</a>
-                    </div>
-                    <div class="col-sm-6 col-md-4 button">
-                        <a class="popup" asp-action="SatelliteCOM">Kommunikáció</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <figure class="col-xs-push-1 col-xs-10">
-                        <img src="~/images/dots_muhold.png" />
-                    </figure>
                 </div>
             </div>
-        </div>
-    </article>
+        </article>
+    </div>
 </section>

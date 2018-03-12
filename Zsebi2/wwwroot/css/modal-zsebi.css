@@ -1,7 +1,10 @@
 ﻿.modal-content-zsebi {
-    background-color: initial;
-    background-image: url(/images/bg_kapcsolat.png);
-    background-size: 100% 100%;
+    background-color: #F5F5F5;
+    opacity: 0.9;
+    border-radius: 10px;
+    border-top-left-radius: 4em;
+    border-bottom-right-radius: 4em;
+    padding: 5px;
 }
 
     .modal-content-zsebi .modal-header {
@@ -25,3 +28,11 @@
         line-height: 19px;
         text-align: justify;
     }
+
+.modal-zsebi-inner {
+    margin: 0;
+    border: 5px solid #2F2F2F;
+    border-radius: 10px;
+    border-top-left-radius: 4em;
+    border-bottom-right-radius: 4em;
+}

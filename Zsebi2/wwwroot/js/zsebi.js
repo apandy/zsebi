@@ -26,8 +26,11 @@
     }
 
     function openModal(link) {
-        $('.modal .modal-content')
+        $('.modal .modal-zsebi-inner')
             .load(link, function () {
+                $('.modal').find("img").each(function() {
+                    $(this).addClass("img-responsive");
+                })
                 $('.modal').modal('show');
             });
     }
