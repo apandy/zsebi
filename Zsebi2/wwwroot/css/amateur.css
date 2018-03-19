@@ -41,13 +41,13 @@ article.amatuer {
     text-align: center;
 }
 
-.amatuer .button a {
-    border: 3px solid #FFFFFF;
-    border-radius: 40px;
-    font-size: 1.125rem;
-    color: #FFFFFF;
-    line-height: 250%;
-}
+    .amatuer .button a {
+        border: 3px solid #FFFFFF;
+        border-radius: 40px;
+        font-size: 1.125rem;
+        color: #FFFFFF;
+        line-height: 250%;
+    }
 
 .amatuer div.button a:hover {
     background: #FFFFFF;
@@ -60,4 +60,49 @@ article.amatuer {
 .amatuer div.button a:active {
     border-color: #2F2F2F;
     color: #000000;
+}
+
+.amatuer .radio img {
+    width: 55%;
+    float: left;
+}
+
+.amatuer .radio .frequency {
+    width: 38%;
+    position: relative;
+    left: 5%;
+    float: left;
+    margin-top: 3%;
+}
+
+    .amatuer .radio .frequency img {
+        position: absolute;
+        width: 100%;
+        top: 1em;
+    }
+
+    .amatuer .radio .frequency div {
+        position: absolute;
+        top: 0%;
+        left: 18%;
+    }
+
+@media (min-width: 1200px) {
+
+    .amatuer .radio .frequency div {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .amatuer .radio .frequency div {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .amatuer .radio .frequency div {
+        font-size: 1.5em;
+    }
 }

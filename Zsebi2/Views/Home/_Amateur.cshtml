@@ -3,14 +3,17 @@
         <header>
             <h2> RÁDIÓ AMATŐRÖK FIGYELEM!</h2>
         </header>
-        <figure>
-            <img style="width: 55%;" src="~/images/radioamator_waveform.png">
-            <img style="width: 38%; position: relative; left: 5%;" src="~/images/frequency_band.png">
+        <figure class="radio">
+            <img src="~/images/radioamator_waveform.png">
+            <div class="frequency">
+                <img src="~/images/frequency_band.png" />
+                <div>437,345 MHz</div>
+            </div>
         </figure>
         <p class="ib">
             A SMOG-1 várhatóan 2019 végén, 2020 elején kerülhet Föld körüli pályára egy Soyuz rakétával az UNISAT-7 olasz műhold fedélzetéről.
-            A 437,345 MHz-es frekvencián fogja küldeni a telemetria adatokat. A telemetria demodulálásához és dekódolásához, 
-            a megfelelő antennán és rádión túl, egy program is szükséges, melyet a további rádiózási adatok résznél lehet majd letölteni. 
+            A 437,345 MHz-es frekvencián fogja küldeni a telemetria adatokat. A telemetria demodulálásához és dekódolásához,
+            a megfelelő antennán és rádión túl, egy program is szükséges, melyet a további rádiózási adatok résznél lehet majd letölteni.
         </p>
         <div class="button ib">
             <a class="popup" asp-controller="Home" asp-action="RadioDetails">TOVÁBBI RÁDIÓZÁSI ADATOK</a>
